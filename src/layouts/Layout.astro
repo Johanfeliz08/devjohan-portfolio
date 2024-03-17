@@ -1,4 +1,6 @@
 ---
+
+
 interface Props {
 	title: string;
 }
@@ -12,8 +14,10 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular" rel="stylesheet">
+		<link href="https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -21,32 +25,33 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+
+		--accent: #BA2222;
+		--accent-2: #1C1E1F;
+		
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+		font-family: "Cera CY Regular", system-ui, sans-serif;
+		background: radial-gradient(217.5% 217.48% at 50% 0%, #1C1E1F 0%, #000 100%);
+		color: white;	
+	}
+
+	h1 {
+		font-family: "Cera CY Bold";
+	}
+
+	p {
+		font-family: "Cera CY Regular";
+	}
+
+	body {
+
+	padding: 0px 100px;
+
+	}
 	
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
 </style>
