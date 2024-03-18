@@ -1,0 +1,75 @@
+---
+import profile from "../assets/profile.jpg";
+---
+
+<section class="aboutme-container h-screen w-full flex flex-col justify-center items-center ">
+
+  <h1 class="section-header relative left-[300px]">
+    ABOUT ME
+  </h1>
+
+  <div class="content flex flex-row max-w-[1500px] max-h-[580px]">
+    
+    <div class="flex flex-col justify-center items-center m-5">
+      <span class="side-text text-3xl">DEVELOPER</span>
+    </div>
+
+    <div class="picture relative bottom-[125px] max-w-[500px] max-h-[200px] shrink-0 ">
+      <img src={profile.src} alt="Johan's picture"/>
+    </div>
+
+    <div class="info flex flex-col gap-5 justify-center m-5 p-16">
+
+      <div class="header-info text-3xl text-accent">
+        <span class="">22 YEARS /</span>
+        <span>DR /</span>
+        <span>JUNIOR</span>
+      </div>
+
+      <p class="text-2xl text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu velit
+        lacinia, egestas ex ac, vulputate orci. Sed dictum nulla vel feugiat
+        feugiat. Vivamus a orci et nisl pharetra sodales et ac ipsum. Nullam
+        porta, ante at euismod placerat, tortor orci dapibus nisl, non fermentum
+        ante nisl at nisi. Donec pulvinar, nunc id accumsan dictum, nisl libero
+        tristique sem, et ornare felis ex quis diam.
+      </p>
+
+      <div class="flex flex-row space-x-7 ">
+        <a href="#" class="main-link hvr-bounce-to-right">CV</a>
+        <a href="#" class="secondary-link hvr-bounce-to-right2">CONTACT</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .content {
+    background: #101112;
+    box-shadow: 0px 4px 100px 0px #000;
+  }
+
+  .section-header {
+    font-size: 96px;
+    font-family: Cera CY Bold;
+  }
+
+  .side-text {
+    font-family: Cera CY Bold;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  p {
+    font-family: Cera CY Regular;
+  }
+
+  .picture img {
+
+    box-shadow: 0px 4px 50px 0px #000;
+
+  }
+
+</style>
