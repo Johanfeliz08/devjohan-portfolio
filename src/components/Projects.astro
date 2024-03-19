@@ -1,0 +1,43 @@
+---
+
+import ProjectsData from "../components/utils/Projects.json";
+import ProjectCard from "./utils/ProjectCard.astro";
+
+---
+
+<section
+  class="projects w-3/4 h-full flex flex-col justify-center items-center gap-20"
+>
+  <h1 class="section-header text-6xl text-accent">PROJECTS</h1>
+
+  {ProjectsData.map((data) => 
+
+    <ProjectCard 
+      id={data.id} 
+      img={data.img} 
+      title={data.title} 
+      description={data.description} 
+      technologies={data.technologies} 
+      link={data.link} 
+    />
+
+  )}
+
+  <a href="#">See more projects</a>
+
+</section>
+
+<style>
+
+  .card {
+    background: #101112;
+    box-shadow: 0px 4px 100px 0px #000;
+  }
+
+  h1,
+  h2 {
+    font-family: Cera CY Bold;
+  }
+
+
+</style>

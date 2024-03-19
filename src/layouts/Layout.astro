@@ -1,8 +1,6 @@
 ---
-
-
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,68 +8,100 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular" rel="stylesheet">
-		<link href="https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold" rel="stylesheet">
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
+  @import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
 
-@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+  :root {
+    --accent: #ba2222;
+    --accent-2: #1c1e1f;
+  }
 
-	:root {
+  html {
+    font-family: "Cera CY Regular", system-ui, sans-serif;
+    background: radial-gradient(
+      217.5% 217.48% at 50% 0%,
+      #1c1e1f 0%,
+      #000 100%
+    );
+    color: white;
+  }
 
-		--accent: #BA2222;
-		--accent-2: #1C1E1F;
-		
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px white; */
+    
+  }
 
-	html {
+  h1 {
+    font-family: "Cera CY Bold";
+  }
 
-		font-family: "Cera CY Regular", system-ui, sans-serif;
-		background: radial-gradient(217.5% 217.48% at 50% 0%, #1C1E1F 0%, #000 100%);
-		color: white;	
-	}
+  p {
+    font-family: "Cera CY Regular";
+  }
 
-	h1 {
-		font-family: "Cera CY Bold";
-	}
+  a {
+    font-family: "Cera CY Regular";
+    font-size: 20px;
+  }
 
-	p {
-		font-family: "Cera CY Regular";
-	}
+  /* main {
+    border: solid 1px blue;
+  }
 
-	body {
+  .welcome {
+    border: solid 1px var(--accent);
+  }
 
-	padding: 0px 100px;
+  .aboutme {
+    border: solid 1px green;
+  }
 
-	}
+  .skills {
+    border: solid 1px green;
+  }
+
+  .projects {
+    border: solid 1px green;
+  }
+
+  header {
+    border: solid 1px white;
+  } */
 
   .main-link {
-
-  color: black;
-  background-color: var(--accent);
-  filter: drop-shadow(0px 4px 20px #000);
-  width:233px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-
+    color: black;
+    background-color: var(--accent);
+    filter: drop-shadow(0px 4px 20px #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hvr-bounce-to-right {
-
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -102,10 +132,14 @@ const { title } = Astro.props;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  .hvr-bounce-to-right:hover,
+  .hvr-bounce-to-right:focus,
+  .hvr-bounce-to-right:active {
     color: var(--accent);
   }
-  .hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  .hvr-bounce-to-right:hover:before,
+  .hvr-bounce-to-right:focus:before,
+  .hvr-bounce-to-right:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
@@ -113,17 +147,12 @@ const { title } = Astro.props;
   }
 
   .secondary-link {
-
-  color: var(--accent);
-  background-color: var(--accent-2);
-  filter: drop-shadow(0px 4px 20px #000);
-  width:233px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-
+    color: var(--accent);
+    background-color: var(--accent-2);
+    filter: drop-shadow(0px 4px 20px #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hvr-bounce-to-right2:before {
@@ -146,14 +175,18 @@ const { title } = Astro.props;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .hvr-bounce-to-right2:hover, .hvr-bounce-to-right2:focus, .hvr-bounce-to-right2:active {
+  .hvr-bounce-to-right2:hover,
+  .hvr-bounce-to-right2:focus,
+  .hvr-bounce-to-right2:active {
     color: var(--accent-2);
   }
-  .hvr-bounce-to-right2:hover:before, .hvr-bounce-to-right2:focus:before, .hvr-bounce-to-right2:active:before {
+  .hvr-bounce-to-right2:hover:before,
+  .hvr-bounce-to-right2:focus:before,
+  .hvr-bounce-to-right2:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   }
-	
+
 </style>

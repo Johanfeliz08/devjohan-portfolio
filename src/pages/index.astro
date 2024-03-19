@@ -4,15 +4,17 @@ import Header from '../components/Header.astro';
 import Welcome from '../components/Welcome.astro';
 import LinkBar from '../components/LinkBar.astro';
 import AboutMe from '../components/AboutMe.astro';
+import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 ---
 
 <Layout title="devjohan">
 	<Header/>
 	<!-- <LinkBar/> -->
-	<main class="flex flex-col justify-center items-center h-full">
+	<main class="flex flex-col w-full max-w-screen-xl gap-y-40 justify-center items-center ">
 		<Welcome/>
 		<AboutMe/>
+		<Projects/>
 		<Skills/>
 	</main>
 </Layout>
