@@ -29,6 +29,7 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  
   @import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
 
   :root {
@@ -38,11 +39,6 @@ const { title } = Astro.props;
 
   html {
     font-family: "Cera CY Regular", system-ui, sans-serif;
-    background: radial-gradient(
-      217.5% 217.48% at 50% 0%,
-      #1c1e1f 0%,
-      #000 100%
-    );
     color: white;
   }
 
@@ -51,6 +47,7 @@ const { title } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(100% 100% at 50% 0%, #1C1E1F 0%, #000 100%);
     /* border: solid 1px white; */
     
   }
@@ -70,13 +67,9 @@ const { title } = Astro.props;
 
   /* main {
     border: solid 1px blue;
-  }
+  } */
 
-  .welcome {
-    border: solid 1px var(--accent);
-  }
-
-  .aboutme {
+  /* .aboutme {
     border: solid 1px green;
   }
 
@@ -94,6 +87,7 @@ const { title } = Astro.props;
 
   .main-link {
     color: black;
+    fill:black;
     background-color: var(--accent);
     filter: drop-shadow(0px 4px 20px #000);
     display: flex;
@@ -136,6 +130,7 @@ const { title } = Astro.props;
   .hvr-bounce-to-right:focus,
   .hvr-bounce-to-right:active {
     color: var(--accent);
+    fill: var(--accent);
   }
   .hvr-bounce-to-right:hover:before,
   .hvr-bounce-to-right:focus:before,
@@ -148,6 +143,7 @@ const { title } = Astro.props;
 
   .secondary-link {
     color: var(--accent);
+    fill:var(--accent);
     background-color: var(--accent-2);
     filter: drop-shadow(0px 4px 20px #000);
     display: flex;
@@ -179,6 +175,7 @@ const { title } = Astro.props;
   .hvr-bounce-to-right2:focus,
   .hvr-bounce-to-right2:active {
     color: var(--accent-2);
+    fill:var(--accent-2);
   }
   .hvr-bounce-to-right2:hover:before,
   .hvr-bounce-to-right2:focus:before,

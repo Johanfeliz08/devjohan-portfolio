@@ -7,6 +7,8 @@ export default {
 
 			"accent": "var(--accent)",
 			"accent-2": "var(--accent-2)",
+			"white":"#ffffff",
+			"black":"#000000"
 		}
 	},
 	plugins: [],

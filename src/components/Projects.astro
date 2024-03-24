@@ -1,14 +1,25 @@
 ---
 
+// Projects's data from a JSON
 import ProjectsData from "../components/utils/Projects.json";
+
+// ProjectCard component
 import ProjectCard from "./utils/ProjectCard.astro";
+
+// Icons
+import Layers from "../assets/icons/Layers.astro";
+import RightArrow from "../assets/icons/RightArrow.astro";
 
 ---
 
 <section
-  class="projects w-3/4 h-full flex flex-col justify-center items-center gap-20"
+  class="projects w-3/4 h-full flex flex-col justify-center gap-20"
 >
-  <h1 class="section-header text-6xl text-accent">PROJECTS</h1>
+
+  <header class="flex flex-row justify-start items-center">
+    <Layers class=" w-16 h-16 fill-white"/>
+    <h1 class="section-header text-6xl text-white px-7">LATEST PROJECTS</h1>
+  </header>
 
   {ProjectsData.map((data) => 
 
@@ -18,12 +29,17 @@ import ProjectCard from "./utils/ProjectCard.astro";
       title={data.title} 
       description={data.description} 
       technologies={data.technologies} 
-      link={data.link} 
+      link={data.view} 
     />
 
   )}
 
-  <a href="#">See more projects</a>
+  <footer class="flex justify-center items-center">
+    <a href="#" class="see-more flex flex-row justify-center items-center w-52 py-4 opacity-80 border-b-2 border-solid border-white ">
+      <span class="text-md">SEE MORE</span>
+        <RightArrow class="arrow-icon w-8 h-8 stroke-white pt-1"/>
+    </a>
+  </footer>
 
 </section>
 
@@ -39,5 +55,29 @@ import ProjectCard from "./utils/ProjectCard.astro";
     font-family: Cera CY Bold;
   }
 
+  .see-more {
+    font-family: Cera CY Regular;
+  }
+
+  .see-more:hover {
+    
+    color: var(--accent);
+    border-color: var(--accent);
+    transition: ease 0.5s;
+
+  }
+
+  .see-more:hover .arrow-icon {
+    
+    stroke: var(--accent);
+    translate: 10px 0px;
+    transition: ease 0.5s;
+
+  }
+
+  .see-more .arrow-icon {
+    translate: 0px 0px;
+    transition: ease 0.5s;
+  }
 
 </style>

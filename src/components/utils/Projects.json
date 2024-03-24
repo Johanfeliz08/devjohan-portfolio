@@ -15,7 +15,8 @@
       "astro": false,
       "tailwind": false
     },
-    "link":""
+    "view":"",
+    "code":""
   },
   {
     "id":1,
@@ -31,6 +32,7 @@
       "astro": true,
       "tailwind": true
     },
-    "link":""
+    "view":"",
+    "code":""
   }
 ]
