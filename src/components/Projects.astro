@@ -29,7 +29,8 @@ import RightArrow from "../assets/icons/RightArrow.astro";
       title={data.title} 
       description={data.description} 
       technologies={data.technologies} 
-      link={data.view} 
+      view={data.view}
+      code={data.code} 
     />
 
   )}
@@ -55,8 +56,13 @@ import RightArrow from "../assets/icons/RightArrow.astro";
     font-family: Cera CY Bold;
   }
 
+
   .see-more {
-    font-family: Cera CY Regular;
+    
+    color:#ffffff;
+    border-color: #ffffff;
+    transition: ease 0.5s;
+
   }
 
   .see-more:hover {
