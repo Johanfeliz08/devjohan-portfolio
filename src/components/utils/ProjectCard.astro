@@ -45,14 +45,13 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 
     <div class="links flex flex-row space-x-4">
 
-      <MainLink text="VIEW" link="#">
+      <MainLink text="VIEW" link={view}>
         <View class="size-5" slot="icon"/>
       </MainLink>
 
-     <SecondaryLink text="CODE" link="#">
+     <SecondaryLink text="CODE" link={code}>
         <Code class="size-5" slot="icon">
       </SecondaryLink>
-
       <!-- <a
         href={view}
         class="main-link hvr-bounce-to-right px-10 py-1 text-xl gap-2"
