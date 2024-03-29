@@ -16,7 +16,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 
 <div class="card flex flex-row w-full h-full max-h-full">
   
-  <div class="image w-[475px] h-auto max-w-[475px] max-h-auto mt-10">
+  <div class="image w-[475px] h-auto max-w-[475px] max-h-auto mt-10 aspect-[26/9]">
     <img src={img} alt={title} class="w-full h-full rounded-tr-xl" />
   </div>
 
@@ -44,7 +44,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
         href={view}
         class="main-link hvr-bounce-to-right px-10 py-1 text-xl gap-2"
       >
-        <View class="w-5 h-5" />
+        <View class="size-5" />
         <span class="text-lg">VIEW</span>
       </a>
 
@@ -52,7 +52,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
         href={code}
         class="secondary-link hvr-bounce-to-right2 px-10 py-1 text-xl gap-2"
       >
-        <Code class="w-5 h-5" />
+        <Code class="size-5" />
         <span class="text-lg">CODE</span>
       </a>
       
