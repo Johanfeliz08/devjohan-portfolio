@@ -1,14 +1,30 @@
 ---
-
-
+import profile from "../assets/profile.jpg";
+import IconSideBar from "./utils/IconSideBar.astro";
 ---
 
-<section class="welcome h-[90vh] w-full flex flex-col justify-center items-center">
+<section class="welcome h-full w-full flex flex-col justify-center items-center">
 
 
-  <div class=" content flex flex-col justify-center max-w-screen-xl">
+  <div class="content flex flex-row justify-center items-center h-[500px] max-w-screen-xl gap-8">
+
+
+    <div class="left-column flex flex-col gap-2">
+      <h1 class="text-7xl">HI, I AM <span class="text-accent">JOHAN</span></h1>
+      <h2 class="text-4xl opacity-40">FRONT-END DEVELOPER</h2>
+    </div>
+
+    <div class="right-column flex flex-row justify-center items-center">
+
+      <div class="picture max-w-[300px] shrink-0">
+        <img src={profile.src} alt="Johan's picture" class="w-full h-full" />
+      </div>
+
+      <IconSideBar/>
+
+    </div>
    
-    <span class="text-accent text-2xl relative top-[85px] left-[35px]">
+    <!-- <span class="text-accent text-2xl relative top-[85px] left-[35px]">
         HI, I AM
     </span>
     
@@ -19,7 +35,7 @@
     <div class="relative bottom-[40px] flex flex-row justify-end space-x-5 px-4">
       <a href="#" class="main-link hvr-bounce-to-right w-56 h-14 text-2xl">CV</a>
       <a href="#" class="secondary-link hvr-bounce-to-right2 w-56 h-14 text-2xl">CONTACT</a>
-    </div>
+    </div> -->
     
   </div>
 
@@ -28,8 +44,8 @@
 
 <style>
 
-  .welcome {
-    background: radial-gradient(100% 100% at 50% 0%, #1C1E1F 0%, #000 100%);
+  .picture img {
+    box-shadow: 0px 4px 50px 0px #000;
   }
 
 </style>

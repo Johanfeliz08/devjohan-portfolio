@@ -2,32 +2,22 @@
 import profile from "../assets/profile.jpg";
 import UserIcon from "../assets/icons/userIcon.astro";
 import Phone from "../assets/icons/Phone.astro";
-import GitIcon from "../assets/icons/GitIcon.astro";
-import LinkedinIcon from "../assets/icons/LinkeinIcon.astro";
-import TwitterIcon from "../assets/icons/TwitterIcon.astro";
+import IconSideBar from "./utils/IconSideBar.astro";
+import MainLink from "./utils/MainLink.astro";
+import SecondaryLink from "./utils/SecondaryLink.astro";
+
+
 ---
 
 <section class="aboutme w-3/4 h-full flex flex-col justify-center items-center">
-  
+
   <h2 class="section-header text-6xl relative left-[200px] top-[25px]">
     ABOUT ME
   </h2>
 
   <div class="content flex flex-row w-full h-[400px] max-h-[400px]">
 
-    <div class="sidebar flex flex-col justify-center items-center px-5 gap-5">
-
-      <a href="#">
-        <GitIcon class="link-icon fill-white size-7"/>
-      </a>
-      <a href="#">
-        <LinkedinIcon class="link-icon fill-white size-7"/>
-      </a>
-      <a href="#">
-        <TwitterIcon class="link-icon fill-white size-7"/>
-      </a>
-
-    </div>
+    <IconSideBar/>
 
     <div class="picture relative bottom-[30px] max-w-[300px] max-h-[200px] shrink-0">
       <img src={profile.src} alt="Johan's picture" />
@@ -49,18 +39,16 @@ import TwitterIcon from "../assets/icons/TwitterIcon.astro";
       </p>
 
       <div class="flex flex-row space-x-7">
-        <a href="#" class="main-link flex flex-row justify-center items-center hvr-bounce-to-right w-44 h-10 text-xl gap-2">
-          
-          <UserIcon class="size-5"/>
-          <span class="pb-1">CV</span>
 
-        </a>
-        <a href="#" class="secondary-link flex flex-row justify-center items-center hvr-bounce-to-right2 w-44 h-10 text-xl gap-2">
-          
-          <Phone class="size-5"/>
-          <span class="pb-1">CONTACT</span>
-          
-       </a>
+
+        <MainLink text="CV" link="#">
+          <UserIcon class="size-5" slot="icon"/>
+        </MainLink>
+
+       <SecondaryLink text="CONTACT" link="#">
+          <Phone class="size-5" slot="icon">
+        </SecondaryLink>
+
       </div>
     </div>
   </div>
@@ -75,21 +63,6 @@ import TwitterIcon from "../assets/icons/TwitterIcon.astro";
 
   .section-header {
     font-family: Cera CY Bold;
-  }
-
-  .sidebar > a .link-icon {
-
-    transform: scale(1,1);
-    transition:ease 0.2s;
-
-  }
-  
-  .sidebar > a:hover .link-icon {
-
-    fill: var(--accent);
-    transform: scale(1.5,1.5);
-    transition:ease 0.2s;
-    
   }
 
   p {

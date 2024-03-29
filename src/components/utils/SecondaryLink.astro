@@ -1,0 +1,65 @@
+---
+
+const {text,link } = Astro.props;
+
+---
+
+
+
+<a href={link} class="secondary-link flex flex-row justify-center items-center hvr-bounce-to-right2 w-44 h-10 text-xl gap-2">
+          
+  <slot name="icon"/>
+  <span class="pb-1">{text}</span>
+  
+</a>
+
+
+<style>
+
+.secondary-link {
+    color: var(--accent);
+    fill:var(--accent);
+    background-color: var(--accent-2);
+    filter: drop-shadow(0px 4px 20px #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hvr-bounce-to-right2:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--accent);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-bounce-to-right2:hover,
+  .hvr-bounce-to-right2:focus,
+  .hvr-bounce-to-right2:active {
+    color: var(--accent-2);
+    fill:var(--accent-2);
+  }
+  .hvr-bounce-to-right2:hover:before,
+  .hvr-bounce-to-right2:focus:before,
+  .hvr-bounce-to-right2:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+
+
+</style>

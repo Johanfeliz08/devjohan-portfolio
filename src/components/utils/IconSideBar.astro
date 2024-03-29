@@ -1,0 +1,38 @@
+---
+import GitIcon from "../../assets/icons/GitIcon.astro";
+import LinkedinIcon from "../../assets/icons/LinkeinIcon.astro";
+import TwitterIcon from "../../assets/icons/TwitterIcon.astro";
+---
+
+<div class="sidebar flex flex-col justify-center items-center px-5 gap-5">
+
+  <a href="#">
+    <GitIcon class="link-icon fill-white size-7"/>
+  </a>
+  <a href="#">
+    <LinkedinIcon class="link-icon fill-white size-7"/>
+  </a>
+  <a href="#">
+    <TwitterIcon class="link-icon fill-white size-7"/>
+  </a>
+
+</div>
+
+<style>
+
+.sidebar > a .link-icon {
+
+transform: scale(1,1);
+transition:ease 0.5s;
+
+}
+
+.sidebar > a:hover .link-icon {
+
+fill: var(--accent);
+transform: scale(1.5,1.5);
+transition:ease 0.5s;
+
+}
+
+</style>

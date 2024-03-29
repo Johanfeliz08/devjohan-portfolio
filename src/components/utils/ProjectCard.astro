@@ -7,6 +7,10 @@ import TailwindIcon from "../../assets/icons/TailwindIcon.astro";
 import AstroIcon from "../../assets/icons/AstroIcon.astro";
 import ReactIcon from "../../assets/icons/ReactIcon.astro";
 
+//Buttons component
+import MainLink from "./MainLink.astro";
+import SecondaryLink from "./SecondaryLink.astro";
+
 // Card's button icons
 import Code from "../../assets/icons/Code.astro";
 import View from "../../assets/icons/View.astro";
@@ -16,7 +20,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 
 <div class="card flex flex-row w-full h-full max-h-full">
   
-  <div class="image w-[475px] h-auto max-w-[475px] max-h-auto mt-10 aspect-[26/9]">
+  <div class="image w-[475px] max-w-[475px] mt-10 aspect-video">
     <img src={img} alt={title} class="w-full h-full rounded-tr-xl" />
   </div>
 
@@ -40,21 +44,30 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
     </div>
 
     <div class="links flex flex-row space-x-4">
-      <a
+
+      <MainLink text="VIEW" link="#">
+        <View class="size-5" slot="icon"/>
+      </MainLink>
+
+     <SecondaryLink text="CODE" link="#">
+        <Code class="size-5" slot="icon">
+      </SecondaryLink>
+
+      <!-- <a
         href={view}
         class="main-link hvr-bounce-to-right px-10 py-1 text-xl gap-2"
       >
         <View class="size-5" />
-        <span class="text-lg">VIEW</span>
+        <span class="text-lg pb-1">VIEW</span>
       </a>
 
       <a
         href={code}
-        class="secondary-link hvr-bounce-to-right2 px-10 py-1 text-xl gap-2"
+        class="secondary-link hvr-bounce-to-right2 px-10 text-xl gap-2"
       >
         <Code class="size-5" />
-        <span class="text-lg">CODE</span>
-      </a>
+        <span class="text-lg pb-[1.5px]">CODE</span>
+      </a> -->
       
     </div>
   </div>
@@ -73,7 +86,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 
   .technology:hover {
     fill: var(--accent);
-    transition:ease 0.2s;
+    transition:ease 0.3s;
   }
 
 
