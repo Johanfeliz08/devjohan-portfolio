@@ -17,7 +17,6 @@ import Phone from "../assets/icons/Phone.astro";
 
     <div class="left-column flex flex-col">
 
-
       <div class="left-column flex flex-col gap-2">
         <h1 class="text-7xl">HI, I AM <span class="text-accent">JOHAN</span></h1>
         <h2 class="text-4xl opacity-40">FRONT-END DEVELOPER</h2>
@@ -25,16 +24,16 @@ import Phone from "../assets/icons/Phone.astro";
     
       <div class="flex flex-row space-x-7 pl-1 pt-3 ">
         
-        <MainLink text="CV" link="#">
+        <MainLink text="CV" link="#" size="default">
           <UserIcon class="size-5" slot="icon"/>
         </MainLink>
 
-       <SecondaryLink text="CONTACT" link="#">
+       <SecondaryLink text="CONTACT" link="#" size="default">
           <Phone class="size-5" slot="icon">
        </SecondaryLink>
   
+      </div>
     </div>
-  </div>
 
     <div class="right-column flex flex-row justify-center items-center">
 
@@ -43,7 +42,7 @@ import Phone from "../assets/icons/Phone.astro";
       </div>
 
       <IconSideBar/>
-
+      
     </div>
    
     <!-- <span class="text-accent text-2xl relative top-[85px] left-[35px]">

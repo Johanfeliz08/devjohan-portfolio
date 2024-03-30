@@ -18,38 +18,38 @@ import View from "../../assets/icons/View.astro";
 const { id, img, title, description, technologies, view, code } = Astro.props;
 ---
 
-<div class="card flex flex-row w-full h-full max-h-full">
+<div class="card flex flex-row w-[800px] h-[325px] max-h-[375px]">
   
-  <div class="image w-[475px] max-w-[475px] mt-10 aspect-video">
-    <img src={img} alt={title} class="w-full h-full rounded-tr-xl" />
+  <div class="image w-[375px] max-w-[475px] mt-10 aspect-video">
+    <img src={img} alt={title} class="w-full rounded-tr-xl" />
   </div>
 
-  <div class="info flex flex-col justify-center items-center w-1/2 gap-7 p-10">
+  <div class="info flex flex-col justify-center items-center w-1/2 gap-4 p-10">
     <h2 class="text-2xl opacity-90">{title}</h2>
 
-    <p class="text-base text-justify max-w-xs opacity-75 text-balance max-h-40">
+    <p class="text-sm text-justify max-w-xs opacity-75 text-balance max-h-40">
       {description}
     </p>
 
     <div class="technologies flex flex-row justify-center items-center gap-5">
 
 
-      {technologies.html && <HtmlIcon class="technology w-12 h-12 fill-white " />}
-      {technologies.javascript && <JavascriptIcon class="technology w-12 h-12 fill-white " />}
-      {technologies.react && <ReactIcon class="technology w-12 h-12 fill-white " />}
-      {technologies.astro && <AstroIcon class="technology w-12 h-12 fill-white " />}
-      {technologies.css && <CssIcon class="technology w-12 h-12 fill-white " />}
-      {technologies.tailwind && <TailwindIcon class="technology w-12 h-12 fill-white " />}
+      {technologies.html && <HtmlIcon class="technology w-9 h-9 fill-white " />}
+      {technologies.javascript && <JavascriptIcon class="technology w-9 h-9 fill-white " />}
+      {technologies.react && <ReactIcon class="technology w-9 h-9 fill-white " />}
+      {technologies.astro && <AstroIcon class="technology w-9 h-9 fill-white " />}
+      {technologies.css && <CssIcon class="technology w-9 h-9 fill-white " />}
+      {technologies.tailwind && <TailwindIcon class="technology w-9 h-9 fill-white " />}
 
     </div>
 
     <div class="links flex flex-row space-x-4">
 
-      <MainLink text="VIEW" link={view}>
+      <MainLink text="VIEW" link={view} size="w-28 h-10">
         <View class="size-5" slot="icon"/>
       </MainLink>
 
-     <SecondaryLink text="CODE" link={code}>
+     <SecondaryLink text="CODE" link={code} size="w-28 h-10">
         <Code class="size-5" slot="icon">
       </SecondaryLink>
       <!-- <a

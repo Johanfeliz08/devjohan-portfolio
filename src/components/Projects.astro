@@ -13,27 +13,28 @@ import RightArrow from "../assets/icons/RightArrow.astro";
 ---
 
 <section
-  class="projects w-3/4 h-full flex flex-col justify-center gap-20"
+  class="projects w-[800px] max-w-[800px] h-full flex flex-col justify-center gap-12"
 >
 
   <header class="flex flex-row justify-start items-center">
-    <Layers class=" w-16 h-16 fill-white"/>
+    <Layers class=" size-14 fill-white"/>
     <h1 class="section-header text-4xl text-white px-7">LATEST PROJECTS</h1>
   </header>
 
-  {ProjectsData.map((data) => 
-
-    <ProjectCard 
-      id={data.id} 
-      img={data.img} 
-      title={data.title} 
-      description={data.description} 
-      technologies={data.technologies} 
-      view={data.view}
-      code={data.code} 
-    />
-
-  )}
+  
+    <div class="projects-main flex flex-col justify-center items-center gap-12">
+      {ProjectsData.map((data) =>
+        <ProjectCard
+          id={data.id}
+          img={data.img}
+          title={data.title}
+          description={data.description}
+          technologies={data.technologies}
+          view={data.view}
+          code={data.code}
+        />
+      )}
+    </div>
 
   <footer class="flex justify-center items-center">
     <a href="#" class="see-more flex justify-center items-center w-52 py-2 opacity-80 border-b-2 border-solid border-white">

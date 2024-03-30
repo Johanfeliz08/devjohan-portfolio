@@ -1,12 +1,20 @@
 ---
 
-const {text,link } = Astro.props;
+const {text,link,size} = Astro.props;
+
+
+const handleSize = (size) => {
+
+const defaultsize = "w-44 h-10"
+return size !== "" && size !=="default"  ? size : defaultsize;
+
+}
 
 ---
 
 
 
-<a href={link} class="secondary-link flex flex-row justify-center items-center hvr-bounce-to-right2 w-44 h-10 text-xl gap-2">
+<a href={link} class={`secondary-link flex flex-row justify-center items-center hvr-bounce-to-right2 text-xl gap-2 ${handleSize(size)}`}>
           
   <slot name="icon"/>
   <span class="pb-1">{text}</span>
