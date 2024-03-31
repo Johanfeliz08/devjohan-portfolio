@@ -83,12 +83,14 @@ import SendIcon from "../assets/icons/SendIcon.astro";
 
     background: none;
     border-bottom: solid white 1px;
+    padding: 11px 0px;
 
   }
 
   input::placeholder {
+    visibility: visible;
     font-size: 18px;
-    transition: ease 0.5s;
+    transition: linear 0.3s;
   }
 
   input:focus {
@@ -104,14 +106,14 @@ import SendIcon from "../assets/icons/SendIcon.astro";
     font-size: 18px;
     color:var(--accent);
     
-   
+
   }
 
   input:focus ~ .label {
 
     visibility: visible;
     translate:0px -20px;
-    transition: ease 0.5s;
+    transition: linear 0.3s;
 
   }
 
