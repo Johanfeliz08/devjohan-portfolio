@@ -18,7 +18,7 @@ import View from "../../assets/icons/View.astro";
 const { id, img, title, description, technologies, view, code } = Astro.props;
 ---
 
-<div class="card flex flex-row w-[800px] h-[325px] max-h-[375px]">
+<div class="card flex flex-row w-[800px] h-[325px] max-h-[375px] border-2 border-solid border-white border-opacity-10">
   
   <div class="image w-[375px] max-w-[475px] mt-10 aspect-video">
     <img src={img} alt={title} class="w-full rounded-tr-xl" />
