@@ -25,7 +25,7 @@ import SendIcon from "../assets/icons/SendIcon.astro";
   </div>
 
   <div
-    class="contact-form w-1/2 flex flex-col gap-5 justify-center items-center p-20"
+    class="contact-form w-1/2 flex flex-col gap-5 justify-center items-center px-20 py-10 "
   >
     <header class="flex flex-col justify-center items-center">
       <h2 class="text-4xl text-accent">CONTACT FORM</h2>
@@ -36,25 +36,29 @@ import SendIcon from "../assets/icons/SendIcon.astro";
 
     <form action="" class="flex flex-col gap-4 w-full">
       <div class="input-group flex flex-col py-3">
-        <input id="name" type="text" placeholder="Name"  />
+        <input id="name" type="text" placeholder="Name" class="input" />
         <label for="name" class="label">Name</label>
       </div>
 
       <div class="input-group flex flex-col py-3">
-        <input id="lastname" type="text" placeholder="Last name" />
+        <input id="lastname" type="text" placeholder="Last name" class="input" />
         <label for="lastname" class="label">Last name</label>
       </div>
 
       <div class="input-group flex flex-col py-3">
-        <input id="email" type="text" class="test" placeholder="E-mail"/>
+        <input id="email" type="text" placeholder="E-mail" class="input" />
         <label for="email" class="label">E-mail</label>
       </div>
 
-      <div class="input-group flex flex-col gap-1">
-        <label for="message" class="message-label">Message</label>
-        <textarea name="message" id="message" class=" min-h-[200px] max-h-[300px]"></textarea>
+      <div class="input-group flex flex-col pt-5">
+        <textarea
+        name="message"
+        id="message"
+        placeholder="Message"
+        class="textarea min-h-[200px] max-h-[300px]"></textarea>
+        <label for="message" class="textarealabel text-[#9da4b0]">Message</label>
       </div>
-      <div class="input-group flex justify-center items-center">
+      <div class="flex justify-center items-center pt-5">
         <button
           type="submit"
           class="main-link flex flex-row justify-center items-center hvr-bounce-to-right px-5 py-3 max-w-52 gap-2"
@@ -68,7 +72,6 @@ import SendIcon from "../assets/icons/SendIcon.astro";
 </section>
 
 <style>
-
   .contact-form {
     background: #101112;
     box-shadow: 0px 4px 100px 0px #000;
@@ -79,60 +82,62 @@ import SendIcon from "../assets/icons/SendIcon.astro";
     font-family: Cera CY Bold;
   }
 
-  input {
-
+  .input {
     background: none;
     border-bottom: solid white 1px;
     padding: 12px 0px;
-
   }
 
-  input::placeholder {
-    visibility: visible;
+  .input::placeholder {
     font-size: 18px;
-    transition: linear 0.3s;
+    transition: linear 0.2s;
   }
 
-  input:focus {
+  .input:focus {
     outline: none;
-    border-color:var(--accent);
-    
+    border-color: var(--accent);
+    transition: linear 0.2s;
   }
 
   .label {
-
-    visibility:hidden;
-    position: absolute;
     font-size: 18px;
-    color:var(--accent);
-    
-
+    position: absolute;
+    translate: 0px -15px;
   }
 
-  input:focus ~ .label {
+  .input:placeholder-shown ~ .label {
+    visibility: hidden;
+    color: var(--accent);
+    translate: 0px 9px;
+  }
 
+  .input:focus ~ .label {
     visibility: visible;
-    translate:0px -20px;
-    transition: linear 0.3s;
-
+    color: var(--accent);
+    translate: 0px -15px;
+    transition: linear 0.2s;
   }
-
-  input:focus::placeholder {
-    visibility:hidden;
-    translate:0px -20px;
-    transition: 0ms;
   
+  .input:focus::placeholder  {
+    visibility: hidden;
+    translate: 0px -15px;
+    transition:0ms;
   }
 
   textarea {
     background: none;
-    border:solid white 1px;
-
+    border: solid white 1px;
+    outline: none;
   }
 
-  .message-label {
+  /* .message-label,textarea::placeholder {
     font-size: 18px;
-  }
+  } */
+/* 
+  textarea:focus {
+    border-color: var(--accent);
+    transition: linear 0.2s;
+  } */
 
   .main-link {
     color: black;
