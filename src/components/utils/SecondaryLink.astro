@@ -27,11 +27,13 @@ return size !== "" && size !=="default"  ? size : defaultsize;
 .secondary-link {
     color: var(--accent);
     fill:var(--accent);
-    background-color: var(--accent-2);
+    background-color:none;
+    border: solid var(--accent) 1px;
     filter: drop-shadow(0px 4px 20px #000);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: ease 0.4s;
   }
 
   .hvr-bounce-to-right2:before {
@@ -57,8 +59,11 @@ return size !== "" && size !=="default"  ? size : defaultsize;
   .hvr-bounce-to-right2:hover,
   .hvr-bounce-to-right2:focus,
   .hvr-bounce-to-right2:active {
-    color: var(--accent-2);
-    fill:var(--accent-2);
+    /* color: var(--accent-2);
+    fill:var(--accent-2); */
+    color: black;
+    fill:black;
+    transition: ease 0.4s;
   }
   .hvr-bounce-to-right2:hover:before,
   .hvr-bounce-to-right2:focus:before,
