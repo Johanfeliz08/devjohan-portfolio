@@ -128,16 +128,45 @@ import SendIcon from "../assets/icons/SendIcon.astro";
     background: none;
     border: solid white 1px;
     outline: none;
+    font-size: 18px;
+    padding: 12px 2px;
   }
 
-  /* .message-label,textarea::placeholder {
+  .textarea::placeholder {
     font-size: 18px;
-  } */
-/* 
-  textarea:focus {
+    transition: linear 0.2s;
+  }
+
+  .textarea:focus {
+    outline: none;
     border-color: var(--accent);
     transition: linear 0.2s;
-  } */
+  }
+
+  .textarealabel {
+    font-size: 18px;
+    position: absolute;
+    translate: 0px -28px;
+  }
+
+  .textarea:placeholder-shown ~ .textarealabel {
+    visibility: hidden;
+    color: var(--accent);
+    translate: 0px 9px;
+  }
+
+  .textarea:focus ~ .textarealabel {
+    visibility: visible;
+    color: var(--accent);
+    translate: 0px -28px;
+    transition: linear 0.2s;
+  }
+  
+  .textarea:focus::placeholder  {
+    visibility: hidden;
+    translate: 0px -15px;
+    transition:0ms;
+  }
 
   .main-link {
     color: black;
