@@ -20,9 +20,7 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
   >
     <IconSideBar />
 
-    <div
-      class="picture relative bottom-[105px] max-w-[300px] h-fit shrink-0"
-    >
+    <div class="picture relative bottom-[105px] max-w-[300px] h-fit shrink-0">
       <img src={profileTest.src} alt="Johan's picture" class="" />
     </div>
 
@@ -53,7 +51,6 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
   </div>
 
   <style>
-
     .content {
       background: #101112;
       box-shadow: 0px 4px 100px 0px #000;
@@ -67,8 +64,8 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
       font-family: Cera CY Regular;
     }
 
-    /* .picture img {
-      box-shadow: 0px 4px 50px 0px #000;
-    } */
+    img {
+      mask-image: linear-gradient(black, black 60%, transparent 100%);
+    }
   </style>
 </section>

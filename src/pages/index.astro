@@ -1,57 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Welcome from '../components/Welcome.astro';
-import AboutMe from '../components/AboutMe.astro';
-import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
-import DownArrow from '../assets/icons/DownArrow.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Welcome from "../components/Welcome.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import DownArrow from "../assets/icons/DownArrow.astro";
 ---
 
 <Layout title="devjohan">
-	<header class="w-full h-[100vh] flex flex-col justify-center items-center">
-		<Header/>
-		<Welcome/>
-		<a href="#projects">
-			<DownArrow class="downarrow fill-accent size-12"/>
-		</a>
-	</header>
-	<main class="main flex flex-col justify-center items-center w-full max-w-screen-xl gap-y-40 py-20">
-		<Projects/>
-		<AboutMe/>
-		<Skills/>
-		<Contact/>
-	</main>
-	
-	<Footer/>
+  <header class="w-full h-[100vh] flex flex-col justify-center items-center">
+    <Header />
+    <Welcome />
+    <a href="#projects">
+      <DownArrow class="downarrow fill-accent size-12" />
+    </a>
+  </header>
+  <main
+    class="main flex flex-col justify-center items-center w-full max-w-screen-xl gap-y-40 py-20"
+  >
+    <Projects />
+    <AboutMe />
+    <Skills />
+    <Contact />
+  </main>
 
+  <Footer />
 </Layout>
 
 <style>
+  header {
+    background: radial-gradient(100% 100% at 50% 0%, #1c1e1f 0%, #000 100%);
+  }
 
-	header {
-		background: radial-gradient(100% 100% at 50% 0%, #1C1E1F 0%, #000 100%);
-	}
+  .downarrow {
+    animation: 2s bounce infinite;
+  }
 
-	.downarrow {
-		animation: 2s bounce infinite;
-	}
-
-	@keyframes bounce {
-
-		from {
-			translate: 0px 0px;
-		}
-		50% {
-			translate: 0px -20px ;
-		}
-		to {
-			translate: 0px 0px;
-		}
-
-	}
-
-	
+  @keyframes bounce {
+    from {
+      translate: 0px 0px;
+    }
+    50% {
+      translate: 0px -20px;
+    }
+    to {
+      translate: 0px 0px;
+    }
+  }
 </style>

@@ -29,7 +29,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  
   @import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
 
   :root {
@@ -49,7 +48,11 @@ const { title } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(217.5% 217.48% at 50% 0%, #1C1E1F 0%, #000 100%);
+    background: radial-gradient(
+      217.5% 217.48% at 50% 0%,
+      #1c1e1f 0%,
+      #000 100%
+    );
   }
 
   h1 {
@@ -64,5 +67,4 @@ const { title } = Astro.props;
     font-family: "Cera CY Regular";
     font-size: 20px;
   }
-
 </style>
