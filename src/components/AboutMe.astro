@@ -1,5 +1,5 @@
 ---
-import profile from "../assets/profile.jpg";
+import profileTest from "../assets/profile-test.png";
 import UserIcon from "../assets/icons/userIcon.astro";
 import Phone from "../assets/icons/Phone.astro";
 import IconSideBar from "./utils/IconSideBar.astro";
@@ -21,9 +21,9 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
     <IconSideBar />
 
     <div
-      class="picture relative bottom-[45px] max-w-[300px] max-h-[200px] shrink-0"
+      class="picture relative bottom-[105px] max-w-[300px] h-fit shrink-0"
     >
-      <img src={profile.src} alt="Johan's picture" class="" />
+      <img src={profileTest.src} alt="Johan's picture" class="" />
     </div>
 
     <div class="info flex flex-col w-full gap-6 justify-center px-10">
@@ -53,6 +53,7 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
   </div>
 
   <style>
+
     .content {
       background: #101112;
       box-shadow: 0px 4px 100px 0px #000;
@@ -66,8 +67,8 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
       font-family: Cera CY Regular;
     }
 
-    .picture img {
+    /* .picture img {
       box-shadow: 0px 4px 50px 0px #000;
-    }
+    } */
   </style>
 </section>
