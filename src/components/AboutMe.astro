@@ -5,30 +5,33 @@ import Phone from "../assets/icons/Phone.astro";
 import IconSideBar from "./utils/IconSideBar.astro";
 import MainLink from "./utils/MainLink.astro";
 import SecondaryLink from "./utils/SecondaryLink.astro";
-
 ---
 
-<section class="aboutme w-3/4 h-full flex flex-col justify-center items-center">
-
+<section
+  id="aboutme"
+  class="aboutme w-3/4 h-full flex flex-col justify-center items-center"
+>
   <h2 class="section-header text-5xl relative left-[200px] top-[25px]">
     ABOUT ME
   </h2>
 
-  <div class="content flex flex-row w-full h-[350px] max-h-[350px] border-2 border-solid border-white border-opacity-10">
+  <div
+    class="content flex flex-row w-full h-[350px] max-h-[350px] border-2 border-solid border-white border-opacity-10"
+  >
+    <IconSideBar />
 
-    <IconSideBar/>
-
-    <div class="picture relative bottom-[45px] max-w-[300px] max-h-[200px] shrink-0 ">
+    <div
+      class="picture relative bottom-[45px] max-w-[300px] max-h-[200px] shrink-0"
+    >
       <img src={profile.src} alt="Johan's picture" class="" />
     </div>
 
     <div class="info flex flex-col w-full gap-6 justify-center px-10">
-
       <div class="header-info text-lg text-accent">
         <h3>22 YEARS / DR / JUNIOR</h3>
       </div>
 
-      <p class=" text-sm text-justify max-w-md text-balance opacity-75">
+      <p class="text-sm text-justify max-w-md text-balance opacity-75">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu velit
         lacinia, egestas ex ac, vulputate orci. Sed dictum nulla vel feugiat
         feugiat. Vivamus a orci et nisl pharetra sodales et ac ipsum. Nullam
@@ -38,37 +41,33 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
       </p>
 
       <div class="flex flex-row space-x-7">
-
-
         <MainLink text="CV" link="#" size="default">
-          <UserIcon class="size-5" slot="icon"/>
+          <UserIcon class="size-5" slot="icon" />
         </MainLink>
 
-       <SecondaryLink text="CONTACT" link="#" size="default">
-          <Phone class="size-5" slot="icon">
+        <SecondaryLink text="CONTACT" link="#" size="default">
+          <Phone class="size-5" slot="icon" />
         </SecondaryLink>
-
       </div>
     </div>
   </div>
+
+  <style>
+    .content {
+      background: #101112;
+      box-shadow: 0px 4px 100px 0px #000;
+    }
+
+    .section-header {
+      font-family: Cera CY Bold;
+    }
+
+    p {
+      font-family: Cera CY Regular;
+    }
+
+    .picture img {
+      box-shadow: 0px 4px 50px 0px #000;
+    }
+  </style>
 </section>
-
-<style>
-
-  .content {
-    background: #101112;
-    box-shadow: 0px 4px 100px 0px #000;
-  }
-
-  .section-header {
-    font-family: Cera CY Bold;
-  }
-
-  p {
-    font-family: Cera CY Regular;
-  }
-
-  .picture img {
-    box-shadow: 0px 4px 50px 0px #000;
-  }
-</style>
