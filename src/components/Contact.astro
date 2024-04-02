@@ -4,18 +4,20 @@ import SendIcon from "../assets/icons/SendIcon.astro";
 
 <section
   id="contact"
-  class="Contact-section w-full h-full flex flex-row gap-10 py-20  justify-between items-center"
+  class="Contact-section w-full h-full flex flex-row gap-10 py-20 justify-between items-center"
 >
   <div
     class="contact-info w-1/2 flex flex-col justify-center items-center gap-5"
   >
     <div class="flex flex-col justify-center items-center gap-2">
       <h2 class="text-4xl text-accent">CONTACT</h2>
-      <p class="max-w-sm opacity-70">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-        ipsam sint labore consequatur. Magnam repellendus quam suscipit,
-        quibusdam iure dolorum fuga delectus temporibus aliquam reprehenderit,
-        doloribus voluptatum expedita praesentium aut.
+      <p class="max-w-sm opacity-70 text-balance text-justify">
+        Thank you for exploring my portfolio! I'm passionate about crafting
+        meaningful digital experiences and solving complex problems through
+        design and development. If you're in need of a dedicated and creative
+        mind to bring your projects to life, I'd love to hear from you. I'm
+        here to collaborate and make your vision a reality. Let's connect and
+        discuss how we can work together to achieve your goals.
       </p>
     </div>
 
@@ -26,7 +28,7 @@ import SendIcon from "../assets/icons/SendIcon.astro";
   </div>
 
   <div
-    class="contact-form w-1/2 flex flex-col gap-5 justify-center items-center px-20 py-10 "
+    class="contact-form w-1/2 flex flex-col gap-5 justify-center items-center px-20 py-10"
   >
     <header class="flex flex-col justify-center items-center">
       <h2 class="text-4xl text-accent">CONTACT FORM</h2>
@@ -42,7 +44,12 @@ import SendIcon from "../assets/icons/SendIcon.astro";
       </div>
 
       <div class="input-group flex flex-col py-3">
-        <input id="lastname" type="text" placeholder="Last name" class="input" />
+        <input
+          id="lastname"
+          type="text"
+          placeholder="Last name"
+          class="input"
+        />
         <label for="lastname" class="label">Last name</label>
       </div>
 
@@ -53,11 +60,12 @@ import SendIcon from "../assets/icons/SendIcon.astro";
 
       <div class="input-group flex flex-col pt-5">
         <textarea
-        name="message"
-        id="message"
-        placeholder="Message"
-        class="textarea min-h-[200px] max-h-[300px]"></textarea>
-        <label for="message" class="textarealabel text-[#9da4b0]">Message</label>
+          name="message"
+          id="message"
+          placeholder="Message"
+          class="textarea min-h-[200px] max-h-[300px]"></textarea>
+        <label for="message" class="textarealabel text-[#9da4b0]">Message</label
+        >
       </div>
       <div class="flex justify-center items-center pt-5">
         <button
@@ -118,11 +126,11 @@ import SendIcon from "../assets/icons/SendIcon.astro";
     translate: 0px -15px;
     transition: linear 0.2s;
   }
-  
-  .input:focus::placeholder  {
+
+  .input:focus::placeholder {
     visibility: hidden;
     translate: 0px -15px;
-    transition:0ms;
+    transition: 0ms;
   }
 
   textarea {
@@ -162,11 +170,11 @@ import SendIcon from "../assets/icons/SendIcon.astro";
     translate: 0px -28px;
     transition: linear 0.2s;
   }
-  
-  .textarea:focus::placeholder  {
+
+  .textarea:focus::placeholder {
     visibility: hidden;
     translate: 0px -15px;
-    transition:0ms;
+    transition: 0ms;
   }
 
   .main-link {
