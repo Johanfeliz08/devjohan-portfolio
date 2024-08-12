@@ -8,6 +8,9 @@ import ProjectCard from "./utils/ProjectCard.astro";
 // Icons
 import Layers from "../assets/icons/Layers.astro";
 import RightArrow from "../assets/icons/RightArrow.astro";
+
+const projects = ProjectsData.filter((data) => data.id <= 3 );
+
 ---
 
 <section
@@ -19,9 +22,11 @@ import RightArrow from "../assets/icons/RightArrow.astro";
     <h1 class="section-header text-4xl text-white px-7">LATEST PROJECTS</h1>
   </header>
 
+
   <div class="projects-main flex flex-col justify-center items-center gap-12">
     {
-      ProjectsData.map((data) => (
+
+      projects.map((data ) => (
         <ProjectCard
           id={data.id}
           img={data.img}
@@ -32,6 +37,7 @@ import RightArrow from "../assets/icons/RightArrow.astro";
           code={data.code}
         />
       ))
+
     }
   </div>
 

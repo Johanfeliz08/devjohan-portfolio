@@ -2,7 +2,7 @@
 
 [
   {
-    "id":0,
+    "id":1,
     "img": "/little-lemon-show.png",
     "title": "Little Lemon",
     "description": "Our web application for restaurants offers convenient features such as online table reservations, food ordering, and menu browsing. Users can create accounts, leave feedback, and access detailed restaurant information. ",
@@ -16,10 +16,27 @@
       "tailwind": false
     },
     "view":"#",
+    "code":"https://github.com/Johanfeliz08/little-lemon"
+  },
+  {
+    "id":2,
+    "img": "/little-lemon-show.png",
+    "title": "Project name",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa quia, doloremque aut minus earum deserunt est fugiat odit maxime soluta accusantium, vero quidem. Hic saepe vitae expedita ea dolorum",
+    "technologies": {
+
+      "html": false,
+      "css": false,
+      "javascript": true,
+      "react": true,
+      "astro": true,
+      "tailwind": true
+    },
+    "view":"#",
     "code":"#"
   },
   {
-    "id":1,
+    "id":3,
     "img": "/little-lemon-show.png",
     "title": "Project name",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa quia, doloremque aut minus earum deserunt est fugiat odit maxime soluta accusantium, vero quidem. Hic saepe vitae expedita ea dolorum",

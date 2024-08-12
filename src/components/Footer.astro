@@ -3,6 +3,7 @@ import Email from "../assets/icons/Email.astro";
 import Copy from "../assets/icons/Copy.astro";
 import logo from "../assets/logo.png";
 import IconSideBar from "./utils/IconSideBar.astro";
+
 ---
 
 <footer
@@ -13,10 +14,10 @@ import IconSideBar from "./utils/IconSideBar.astro";
   </div>
 
   <div class="email flex flex-row justify-center items-center gap-1">
-      <Email class="fill-white size-7" />
+    <Email class="fill-white size-7" />
     <h5 class="bg-accent-2 py-1 px-5 rounded-lg">dev.johanefelizu@gmail.com</h5>
-    <button type="button">
-      <Copy class="fill-white size-7" />
+    <button id="copybtn" class="copybtn" type="button">
+      <Copy class="copyicon fill-white size-7" />
     </button>
   </div>
 
@@ -68,4 +69,38 @@ import IconSideBar from "./utils/IconSideBar.astro";
     background-color: rgba(209, 209, 209, 0.13);
     transition: ease 0.5s;
   }
+
+  .copybtn:hover .copyicon {
+    fill:#ba2222; 
+  }
+
 </style>
+
+
+<script>
+
+  const copyToClipboard = () => {
+
+      const myemail = "dev.johanefeliz@gmail.com";
+      let textCopied = false;
+      navigator.clipboard.writeText(myemail)
+        .then(() => {
+          textCopied = true;
+          console.log("Text copied to clipboard!");
+        })
+        .catch(error => {
+          textCopied = false;
+          console.error("Could not copy text: ", error);
+        });
+    }
+  
+    const copybutton = document.getElementById("copybtn");
+    copybutton.addEventListener('click', () => {
+      copyToClipboard();
+    });
+
+
+</script>
+
+
+
