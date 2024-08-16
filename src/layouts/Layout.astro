@@ -1,7 +1,7 @@
 ---
-interface Props {
-  title: string;
-}
+// interface Props {
+//   title: string;
+// }
 
 const { title } = Astro.props;
 ---
@@ -14,14 +14,14 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <!-- <link
+    <link
       href="https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular"
       rel="stylesheet"
     />
     <link
       href="https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold"
       rel="stylesheet"
-    /> -->
+    />
     <title>{title}</title>
   </head>
   <body>

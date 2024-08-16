@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // Stylesheet
 import "../components/styles/Contact.css";
+import { validateEmail } from "../components/utils/ValidateEmail";
 
 const EMAIL_API_KEY = import.meta.env.PUBLIC_EMAIL_API_KEY;
 
@@ -68,6 +69,17 @@ const Contact = () => {
     
   };
 
+  const isFormValid = () => {
+
+    // Validating the data of the form, return true is everything is correct and false otherwise
+
+    return (
+
+      name.value.length >= 2 && name.value.length <= 20 && lastName.value.length >= 2 && lastName.value.length <= 20 && validateEmail(email.value) && message.value.length >= 2
+
+    )
+
+  }
 
   return (
     <>
@@ -116,14 +128,16 @@ const Contact = () => {
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Name"
+                placeholder="Name *"
                 className="input"
                 value={name.value}
                 onChange={(e) => setName({ ...name, value: e.target.value })}
+                onBlur={(e) => setName({...name, isTouched: true})}
               />
               <label htmlFor="name" className="label">
-                Name
+                Name *
               </label>
+              {name.value.length < 2 && name.isTouched ? (<span className="text-accent py-1">Your name must be at least 2 characters</span>) : null }
             </div>
 
             <div className="input-group flex flex-col py-3">
@@ -131,14 +145,16 @@ const Contact = () => {
                 name="lastname"
                 id="lastname"
                 type="text"
-                placeholder="Last name"
+                placeholder="Last name *"
                 className="input"
                 value={lastName.value} 
                 onChange={e => setLastName({...lastName, value: e.target.value})}
+                onBlur={(e) => setLastName({...lastName, isTouched: true})}
               />
               <label htmlFor="lastname" className="label">
-                Last name
+                Last name *
               </label>
+              {lastName.value.length < 2 && lastName.isTouched ? (<span className="text-accent py-1">Your last name must be at least 2 characters</span>) : null }
             </div>
 
             <div className="input-group flex flex-col py-3">
@@ -146,34 +162,43 @@ const Contact = () => {
                 name="email"
                 id="email"
                 type="text"
-                placeholder="E-mail"
+                placeholder="E-mail *"
                 className="input"
                 value={email.value} 
                 onChange={e => setEmail({...email, value: e.target.value})}
+                onBlur={(e) => setEmail({...email, isTouched: true})}
               />
               <label htmlFor="email" className="label">
-                E-mail
+                E-mail *
               </label>
+              {validateEmail(email.value) === false && lastName.isTouched ? (<span className="text-accent py-1">Invalid email</span>) : null }
             </div>
 
             <div className="input-group flex flex-col pt-5">
               <textarea
                 name="message"
                 id="message"
-                placeholder="Message"
+                placeholder="Message *"
                 className="textarea min-h-[200px] max-h-[300px]"
                 value={message.value} 
                 onChange={e => setMessage({...message, value: e.target.value})}
+                onBlur={(e) => setMessage({...message, isTouched: true})}
               ></textarea>
               <label htmlFor="message" className="textarealabel text-[#9da4b0]">
-                Message
+                Message *
               </label>
+              {/* {message.value === "" && message.isTouched ? (<span className="text-accent py-1">You must enter a message</span>) : null } */}
+              {message.value.length < 2 && message.isTouched ? (<span className="text-accent py-1">Your message must include a least 2 charaters</span>) : null }
             </div>
             <div className="flex justify-center items-center pt-5">
               <button
                 id="submitbtn"
                 type="submit"
                 className="main-link flex flex-row justify-center items-center hvr-bounce-to-right px-5 py-3 max-w-52 gap-2"
+                /* Due to "isFormValid" return true when the form validation is correct, we must use ! , because "disabled" is enabled when is true, so if isFormValid
+                   is true "disable" have to be false
+                */
+                disabled={!isFormValid()}
               >
                 <svg
                   version="1.0"
