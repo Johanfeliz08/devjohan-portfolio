@@ -4,6 +4,7 @@ import { useState } from "react";
 // Stylesheet
 import "../components/styles/Contact.css";
 
+const EMAIL_API_KEY = import.meta.env.PUBLIC_EMAIL_API_KEY;
 
 const Contact = () => {
   const [name, setName] = useState({
@@ -35,7 +36,7 @@ const Contact = () => {
     const formData = new FormData(e.target);
 
     // Append the api key to the form data
-    formData.append("access_key","6dfa7361-d26c-4b97-ae6b-18f2c0f117d6");
+    formData.append("access_key",`${EMAIL_API_KEY}`);
 
     // Parsing the data form to an object
     const object= Object.fromEntries(formData);
