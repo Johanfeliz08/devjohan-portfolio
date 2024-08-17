@@ -5,6 +5,12 @@ import { useState } from "react";
 import "../components/styles/Contact.css";
 import { validateEmail } from "../components/utils/ValidateEmail";
 
+// Modal component
+import Modal from "./utils/Modal";
+
+// Modal Email sent icon
+import emailSentIcon from "../assets/icons/emailsent.png"
+
 const EMAIL_API_KEY = import.meta.env.PUBLIC_EMAIL_API_KEY;
 
 const Contact = () => {
@@ -28,6 +34,8 @@ const Contact = () => {
     isTouched: false,
   });
 
+  const [emailSent,setEmailSent] = useState(false);
+  
   const handleSubmit = async (e) => {
 
     // Prevent that the form reload the page
@@ -57,17 +65,42 @@ const Contact = () => {
         }).then((response) => response.json())
 
         if (response.success) {
+          setEmailSent(true);
           console.log("Sucess",response.message);
+          clearForm();
         }
 
     } catch (e) {
 
       console.log("There was an error" + e)
+      setEmailSent(false);
 
     }
 
     
   };
+
+  const clearForm = () => {
+
+    setName({value: "",
+      isTouched: false
+    })
+
+    setLastName({value: "",
+      isTouched: false
+    })
+
+    setEmail({value: "",
+      isTouched: false
+    })
+
+    setMessage({value: "",
+      isTouched: false
+    })
+
+  }
+
+ 
 
   const isFormValid = () => {
 
@@ -83,6 +116,8 @@ const Contact = () => {
 
   return (
     <>
+    {/*Remind to change this to true xd*/}
+    {emailSent === true ? (<Modal toggleShow={setEmailSent} icon={emailSentIcon.src} title="EMAIL SENT" message="Your email has been sent successfully, thanks for contacting me." />) : null}
       <section
         id="contact"
         className="Contact-section w-full h-full flex flex-row gap-10 py-20 justify-between items-center"
@@ -188,7 +223,7 @@ const Contact = () => {
                 Message *
               </label>
               {/* {message.value === "" && message.isTouched ? (<span className="text-accent py-1">You must enter a message</span>) : null } */}
-              {message.value.length < 2 && message.isTouched ? (<span className="text-accent py-1">Your message must include a least 2 charaters</span>) : null }
+              {message.value.length < 2 && message.isTouched ? (<span className="text-accent py-1">Your message must include a message</span>) : null }
             </div>
             <div className="flex justify-center items-center pt-5">
               <button
