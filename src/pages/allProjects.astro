@@ -1,32 +1,43 @@
 ---
+
+// Components
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProjectCard from "../components/utils/ProjectCard.astro";
+
 // Projects's data from a JSON
 import ProjectsData from "../components/utils/Projects.json";
-
-// ProjectCard component
-import ProjectCard from "./utils/ProjectCard.astro";
 
 // Icons
 import Layers from "../assets/icons/Layers.astro";
 import RightArrow from "../assets/icons/RightArrow.astro";
 
-const projects = ProjectsData.filter((data) => data.id <= 3 );
+const allProjects = ProjectsData;
 
 ---
 
-<section
+<Layout title="devjohan | Projects">
+  <header class="w-full flex flex-col justify-center items-center">
+    <Header />
+  </header>
+  <main
+    class="main flex flex-col justify-center items-center w-full max-w-screen-xl gap-y-32 py-20"
+  >
+    
+  <section
   id="projects"
   class="projects w-[800px] max-w-[800px] h-full flex flex-col justify-center py-10 gap-8"
 >
   <header class="flex flex-row justify-start items-center">
     <Layers class="size-14 fill-white" />
-    <h1 class="section-header text-4xl text-white px-7">LATEST PROJECTS</h1>
+    <h1 class="section-header text-4xl text-white px-7">ALL MY PROJECTS</h1>
   </header>
 
 
   <div class="projects-main flex flex-col justify-center items-center gap-12">
     {
-
-      projects.map((data ) => (
+      allProjects.map((data ) => (
         <ProjectCard
           id={data.id}
           img={data.img}
@@ -43,46 +54,45 @@ const projects = ProjectsData.filter((data) => data.id <= 3 );
 
   <footer class="flex justify-center items-center">
     <a
-      href="/allProjects"
-      class="see-more flex justify-center items-center w-44 py-2 opacity-80 border-b-2 border-solid border-white"
+      href="/"
+      class="go-back flex justify-center items-center w-44 py-2 opacity-80 border-b-2 border-solid border-white"
     >
-      <span class="text-sm">SEE MORE</span>
+      <span class="text-sm">GO BACK</span>
       <RightArrow class="arrow-icon size-5 stroke-white" />
     </a>
   </footer>
 </section>
 
+
+  </main>
+
+  <Footer/>
+</Layout>
+
+
 <style>
-  .card {
-    background: #101112;
-    box-shadow: 0px 4px 100px 0px #000;
-  }
 
-  h1,
-  h2 {
-    font-family: Cera CY Bold;
-  }
-
-  .see-more {
+.go-back {
     color: #ffffff;
     border-color: #ffffff;
     transition: ease 0.5s;
   }
 
-  .see-more:hover {
+  .go-back:hover {
     color: var(--accent);
     border-color: var(--accent);
     transition: ease 0.5s;
   }
 
-  .see-more:hover .arrow-icon {
+  .go-back:hover .arrow-icon {
     stroke: var(--accent);
     translate: 10px 0px;
     transition: ease 0.5s;
   }
 
-  .see-more .arrow-icon {
+  .go-back .arrow-icon {
     translate: 0px 0px;
     transition: ease 0.5s;
   }
+
 </style>
