@@ -5,6 +5,8 @@ import Phone from "../assets/icons/Phone.astro";
 import IconSideBar from "./utils/IconSideBar.astro";
 import MainLink from "./utils/MainLink.astro";
 import SecondaryLink from "./utils/SecondaryLink.astro";
+import cvSpanish from "../assets/CV - Johan E. Feliz Ureña - Spanish.pdf";
+import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
 ---
 
 <section
@@ -41,11 +43,11 @@ import SecondaryLink from "./utils/SecondaryLink.astro";
       </p>
 
       <div class="flex flex-row space-x-7">
-        <MainLink text="CV" link="#" size="default">
+        <MainLink text="CV" link={cvSpanish} size="default" target="_blank">
           <UserIcon class="size-5" slot="icon" />
         </MainLink>
 
-        <SecondaryLink text="CONTACT" link="#contact" size="default">
+        <SecondaryLink text="CONTACT" link="#contact" size="default" target="_self">
           <Phone class="size-5" slot="icon" />
         </SecondaryLink>
       </div>
