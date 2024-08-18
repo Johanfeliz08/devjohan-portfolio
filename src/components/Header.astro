@@ -1,42 +1,60 @@
 ---
 
+import homeIcon from '../assets/icons/home.png'
+import projectsIcon from '../assets/icons/projects.png'
+import aboutmeIcon from '../assets/icons/aboutme.png'
+import contactIcon from '../assets/icons/contact.png'
+
 ---
 
 <header
-  class="flex flex-row justify-between items-center w-[1280px] max-w-screen-xl h-[10px] pt-10"
+  class="flex flex-row justify-center items-center w-[1280px] max-w-screen-xl h-[10px] pt-14"
 >
-  <span class="text-accent text-xl">DEV.JOHAN</span>
-
   <nav>
-    <ul class="flex space-x-3">
+    <ul class="flex flex-row space-x-8">
       <li>
-        <a href="#" class="hvr-underline-from-center">HOME</a>
+        <a href="/#" class="hvr-underline-from-center flex flex-row">
+          <img src={homeIcon.src} alt="home icon" aria-hidden="true" class="size-5">
+          <span>HOME</span>
+        </a>
       </li>
       <li>
-        <a href="#projects" class="hvr-underline-from-center">PROJECTS</a>
+        <a href="/#projects" class="hvr-underline-from-center">
+          <img src={projectsIcon.src} alt="Layers icon" aria-hidden="true" class="size-5">
+          <span>PROJECTS</span>
+        </a>
       </li>
       <li>
-        <a href="#aboutme" class="hvr-underline-from-center">ABOUT ME</a>
+        <a href="/#aboutme" class="hvr-underline-from-center">
+          <img src={aboutmeIcon.src} alt="Person icon" aria-hidden="true" class="size-5">
+          <span>ABOUT ME</span>
+        </a>
       </li>
       <li>
-        <a href="#contact" class="hvr-underline-from-center">CONTACT</a>
+        <a href="/#contact" class="hvr-underline-from-center">
+          <img src={contactIcon.src} alt="Phone icon" aria-hidden="true" class="size-5">
+          <span>CONTACT</span>
+        </a>
       </li>
     </ul>
   </nav>
 </header>
 
 <style>
-  li,
+
   a {
+    justify-content: center;
+    align-items: center;
     padding: 5px;
   }
 
   span {
-    font-family: Cera CY Bold;
+    margin-left: 0.5rem;
   }
 
   .hvr-underline-from-center {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
