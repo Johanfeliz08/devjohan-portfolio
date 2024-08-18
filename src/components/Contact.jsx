@@ -116,7 +116,6 @@ const Contact = () => {
 
   return (
     <>
-    {/*Remind to change this to true xd*/}
     {emailSent === true ? (<Modal toggleShow={setEmailSent} icon={emailSentIcon.src} title="EMAIL SENT" message="Your email has been sent successfully, thanks for contacting me." />) : null}
       <section
         id="contact"

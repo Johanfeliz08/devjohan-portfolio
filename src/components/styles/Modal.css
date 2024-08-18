@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular');
-@import url('https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold');
+/* @import url('https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular'); */
+/* @import url('https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold'); */
 
 .modal {
   border-radius: 10px;
@@ -11,10 +11,6 @@
 
   font-family: "Cera CY Bold", sans-serif;
 
-}
-
-.modal-icon path {
-  fill:var(--primarycolor2);
 }
 
 .message p {
