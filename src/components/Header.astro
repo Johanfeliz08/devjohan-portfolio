@@ -8,9 +8,9 @@ import contactIcon from '../assets/icons/contact.png'
 ---
 
 <header
-  class="flex flex-row justify-center items-center w-[1280px] max-w-screen-xl h-[10px] pt-14"
+  class="flex flex-row justify-center items-center w-[1280px] max-w-screen-xl h-[10px] pt-10"
 >
-  <nav>
+  <nav class="flex flex-row justify-center items-center fixed z-40 backdrop-blur-sm px-16 py-5  border-black border-solid border-b w-full">
     <ul class="flex flex-row space-x-8">
       <li>
         <a href="/#" class="hvr-underline-from-center flex flex-row">
@@ -41,6 +41,24 @@ import contactIcon from '../assets/icons/contact.png'
 </header>
 
 <style>
+
+  @keyframes scrollbg {
+
+    5%{
+      background: radial-gradient(100% 100% at 50% 0%, #1c1e1f 0%, #121414 100%);  
+    }
+
+    100%{
+      background: radial-gradient(100% 100% at 50% 0%, #1c1e1f 0%, #121414 100%);  
+    }
+
+  }
+
+  nav {
+    animation: scrollbg linear;
+    animation-timeline: scroll();
+  }
+
 
   a {
     justify-content: center;
