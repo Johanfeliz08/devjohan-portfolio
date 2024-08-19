@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Welcome from "../components/Welcome.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Projects from "../components/Projects.astro";
@@ -12,7 +12,7 @@ import Contact from "../components/Contact.jsx";
 
 <Layout title="devjohan">
   <header class="w-full h-[100vh] flex flex-col justify-center items-center">
-    <Header />
+    <Header client:load />
     <Welcome />
     <a href="#projects">
       <DownArrow class="downarrow fill-accent size-12" />

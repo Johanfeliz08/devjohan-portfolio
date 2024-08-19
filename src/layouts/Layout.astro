@@ -1,9 +1,7 @@
 ---
-// interface Props {
-//   title: string;
-// }
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -14,14 +12,6 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <!-- <link
-      href="https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular"
-      rel="stylesheet"
-    />
-    <link
-      href="https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold"
-      rel="stylesheet"
-    /> -->
     <title>{title}</title>
   </head>
   <body>
@@ -30,10 +20,22 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 
-  @import url('https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular');
-  @import url('https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
   @import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
+
+@font-face {
+    font-family: "Cera CY Regular";
+    src: url('../assets/fonts/Cera CY Regular/a1ab9bebae84d82fbcfe930c4643de7a.woff2') format('woff2'),
+         url('../assets/fonts/Cera CY Regular/a1ab9bebae84d82fbcfe930c4643de7a.woff') format('woff'),  
+         url('../assets/fonts/Cera CY Regular/a1ab9bebae84d82fbcfe930c4643de7a.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Cera CY Bold";
+    src: url('../assets/fonts/Cera CY Bold/6a28a1fb5b77054a12626d0c23c92aa2.woff2') format('woff2'),
+         url('../assets/fonts/Cera CY Bold/6a28a1fb5b77054a12626d0c23c92aa2.woff') format('woff'),  
+         url('../assets/fonts/Cera CY Bold/6a28a1fb5b77054a12626d0c23c92aa2.ttf') format('truetype');
+}
 
   :root {
     --accent: #ba2222;
