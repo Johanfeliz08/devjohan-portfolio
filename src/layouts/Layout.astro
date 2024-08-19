@@ -32,6 +32,7 @@ const { title } = Astro.props;
 
   @import url('https://db.onlinewebfonts.com/c/a1ab9bebae84d82fbcfe930c4643de7a?family=Cera+CY+Regular');
   @import url('https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
   @import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
 
   :root {
@@ -40,7 +41,7 @@ const { title } = Astro.props;
   }
 
   html {
-    font-family: "Cera CY Regular", system-ui, sans-serif;
+    font-family: "Cera CY Regular", "Poppins", sans-serif;
     color: white;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -59,15 +60,17 @@ const { title } = Astro.props;
   }
 
   h1 {
-    font-family: "Cera CY Bold";
+    font-family: "Cera CY Bold", "Poppins", sans-serif;
+    font-weight: bold;
   }
 
   p {
-    font-family: "Cera CY Regular";
+    font-family: "Poppins";
+    font-weight: 300;
   }
 
   a {
-    font-family: "Cera CY Regular";
+    font-family: "Cera CY Regular", "Poppins", sans-serif;
     font-size: 20px;
   }
 
