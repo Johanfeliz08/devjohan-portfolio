@@ -78,5 +78,59 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
     transition:ease 0.5s;
   }
 
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (width < 768px) {
+
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height:650px;
+      height: 650px;
+      max-width: 450px;
+      width: 100%;      
+    }
+
+    .image {
+      height: auto;
+      width:300px;
+      margin-top:0px;
+    }
+
+    .info {
+      width: 100%;
+      gap:30px;
+    }
+
+
+  }
+
+  /* Medium screen size */
+  @media (width < 1000px and width > 768px) {
+
+    .card {
+      width: 700px;
+      height: 350px ;
+    }
+
+    .image {
+      height: 100%;
+      width:350px;
+      margin-top:0px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .image > img {
+      height: 80%;
+    }
+
+  }
+
+
 
 </style>

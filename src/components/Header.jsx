@@ -33,7 +33,7 @@ const Header = () => {
   
   return (
     <>
-      <header className="mainheader flex flex-row justify-center items-center w-[1280px] max-w-screen-xl h-[10px] pt-10">
+      <header className="mainheader flex flex-row justify-center items-center w-full max-w-screen-xl h-[10px] pt-10">
         <nav className="navbar flex flex-row justify-between md:justify-center items-center fixed z-40 px-16 py-5 border-black border-solid border-b w-full">
           <div className="logo-container md:hidden">
             <img src={logo.src} alt="devjohan logo" className=" size-14" />

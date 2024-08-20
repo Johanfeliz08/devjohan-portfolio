@@ -23,7 +23,7 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
         </h1>
         <h2 class="text-4xl opacity-40">FRONT-END DEVELOPER</h2>
         
-        <div class="flex flex-row space-x-7 pl-1 pt-3">
+        <div class="buttons flex flex-row space-x-7 pl-1 pt-3">
           <MainLink text="CV" link={cvSpanish} size="default" target="_blank">
             <UserIcon class="size-5" slot="icon" />
           </MainLink>
@@ -44,9 +44,66 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
    
   </div>
 
-  <style>
-    .picture img {
-      box-shadow: 0px 4px 50px 0px #000;
-    }
-  </style>
 </section>
+
+<style>
+
+  .picture img {
+    box-shadow: 0px 4px 50px 0px #000;
+  }
+
+
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (width < 768px) {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .picture {
+      width: 220px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size:30px;
+    }
+  }
+
+  /* Medium screen size */
+  @media (width < 1000px) {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  h1,h2 {
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+
+
+</style>
