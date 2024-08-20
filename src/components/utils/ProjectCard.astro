@@ -81,7 +81,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
   /* Responsive design */
 
   /* Small screen size */
-  @media (width < 768px) {
+  @media (max-width:768px) {
 
 
     .card {
@@ -92,7 +92,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
       max-height:650px;
       height: 650px;
       max-width: 450px;
-      width: 100%;      
+      width: 100%;    
     }
 
     .image {
@@ -110,16 +110,19 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
   }
 
   /* Medium screen size */
-  @media (width < 1000px and width > 768px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
 
     .card {
-      width: 700px;
+      display: flex;
+      flex-direction: row;
+      width:700px ;
+      max-width: 800px;
       height: 350px ;
     }
 
     .image {
       height: 100%;
-      width:350px;
+      width:100%;
       margin-top:0px;
       display: flex;
       align-items: flex-end;
@@ -127,6 +130,7 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 
     .image > img {
       height: 80%;
+      width: auto;
     }
 
   }
