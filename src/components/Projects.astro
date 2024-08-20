@@ -15,9 +15,9 @@ const projects = ProjectsData.filter((data) => data.id <= 3 );
 
 <section
   id="projects"
-  class="projects max-w-[800px] h-full flex flex-col justify-center py-10 gap-8"
+  class="projects max-w-screen-lg h-full flex flex-col justify-center py-10 gap-8"
 >
-  <header class="flex flex-row justify-start items-center">
+  <header class="header flex flex-row justify-start items-center max-w-screen-lg">
     <Layers class="size-14 fill-white" />
     <h1 class="section-header text-4xl text-white px-7">LATEST PROJECTS</h1>
   </header>
@@ -85,4 +85,5 @@ const projects = ProjectsData.filter((data) => data.id <= 3 );
     translate: 0px 0px;
     transition: ease 0.5s;
   }
+
 </style>

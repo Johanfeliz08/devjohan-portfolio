@@ -2,7 +2,7 @@
 
 // Components
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.astro";
 import ProjectCard from "../components/utils/ProjectCard.astro";
 
@@ -18,18 +18,18 @@ const allProjects = ProjectsData;
 ---
 
 <Layout title="devjohan | Projects">
-  <header class="w-full flex flex-col justify-center items-center">
+  <header class=" max-w-screen-lg flex flex-col justify-center items-center">
     <Header />
   </header>
   <main
-    class="main flex flex-col justify-center items-center w-full max-w-screen-xl gap-y-32 py-20"
+    class="main flex flex-col justify-center items-center w-full max-w-screen-lg gap-y-32 py-20"
   >
     
   <section
   id="projects"
-  class="projects w-[800px] max-w-[800px] h-full flex flex-col justify-center py-10 gap-8"
+  class="projects max-w-screen-lg h-full flex flex-col justify-center py-10 gap-8"
 >
-  <div class="header flex flex-row justify-start items-center">
+  <div class="header flex flex-row justify-start items-center max-w-screen-lg">
     <Layers class="size-14 fill-white" />
     <h1 class="section-header text-4xl text-white px-7">ALL MY PROJECTS</h1>
   </div>
