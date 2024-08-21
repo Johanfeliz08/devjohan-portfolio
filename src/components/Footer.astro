@@ -6,7 +6,7 @@ import IconSideBar from "./utils/IconSideBar.astro";
 ---
 
 <footer
-  class="w-full flex flex-row justify-center items-center h-[200px] max-h-[200px] gap-20"
+  class="container w-full max-w-none flex flex-row justify-center items-center h-[13rem]  gap-20"
 >
   <div class="logo w-28">
     <img src={logo.src} alt="My logo" />
@@ -67,7 +67,7 @@ import IconSideBar from "./utils/IconSideBar.astro";
   </div>
 
   <nav>
-    <ul class="flex flex-col justify-center items-center text-sm">
+    <ul class="flex flex-col justify-center items-center text-sm md:text-clip">
       <li>
         <a href="#">Home</a>
       </li>
@@ -83,7 +83,7 @@ import IconSideBar from "./utils/IconSideBar.astro";
     </ul>
   </nav>
 
-  <IconSideBar  direction="flex-col" />
+  <IconSideBar direction="md:flex-col" />
 </footer>
 
 <style>
@@ -236,12 +236,45 @@ import IconSideBar from "./utils/IconSideBar.astro";
   .btn-copy:hover svg {
     color: var(--button-hover-text-color);
   }
+
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (max-width: 767px) {
+  
+    .container {
+      flex-direction: column;
+      height:22rem;
+      max-height: 22rem;
+      gap: 2rem;
+    }
+    .logo {
+      display: none;
+    }
+
+  
+  }
+
+  /* Medium screen size */
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    .container {
+      height:15rem;
+      max-height: none;
+      gap: 2rem;
+    }
+
+    .logo {
+      display: none;
+    }
+  
+  }
+
+
 </style>
 
 <script>
-  
- const copyToClipboard = () => {
-
+  const copyToClipboard = () => {
     const myemail = "dev.johanefeliz@gmail.com";
     let textCopied = false;
 
@@ -255,12 +288,10 @@ import IconSideBar from "./utils/IconSideBar.astro";
         textCopied = false;
         console.error("Could not copy text: ", error);
       });
-
   };
 
   const copybutton = document.getElementById("copybtn");
   copybutton?.addEventListener("click", () => {
     copyToClipboard();
   });
-
 </script>
