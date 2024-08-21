@@ -41,7 +41,7 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
           <img src={profile.src} alt="Johan's picture" class="w-full h-full" />
         </div>
 
-        <IconSideBar direction="flex-col" />
+        <IconSideBar direction="lg:flex-col" />
       </div>
    
   </div>
@@ -80,6 +80,12 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
       text-align: center;
       font-size:30px;
     }
+
+    .right-column {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   }
 
   /* Medium screen size */
@@ -101,6 +107,15 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
     justify-content: center;
     align-items: center;
   }
+
+  .right-column {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .picture {
+      width: 20rem;
+    }
 
 }
 
