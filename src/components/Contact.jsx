@@ -119,7 +119,7 @@ const Contact = () => {
     {emailSent === true ? (<Modal toggleShow={setEmailSent} icon={emailSentIcon.src} title="EMAIL SENT" message="Your email has been sent successfully, thanks for contacting me." />) : null}
       <section
         id="contact"
-        className="Contact-section w-full h-full flex flex-row gap-10 py-20 justify-between items-center"
+        className="contact-section w-full h-full flex flex-row gap-10 py-20 justify-between items-center"
       >
         <div className="contact-info w-1/2 flex flex-col justify-center items-center gap-5">
           <div className="flex flex-col justify-center items-center gap-2">

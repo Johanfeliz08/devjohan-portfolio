@@ -166,3 +166,39 @@
 
   }
   
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (max-width:768px) {
+
+    .contact-section {
+      flex-direction: column;
+    }
+
+    .contact-info {
+      width: 100%;
+    }
+
+    .contact-form {
+      width: 80%;
+    }
+   
+
+  }
+
+  /* Medium screen size */
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .contact-section {
+      flex-direction: column;
+    }
+
+    .contact-info {
+      width: 100%;
+    }
+
+    .contact-form {
+      width: 80%;
+    }
+
+  } 
