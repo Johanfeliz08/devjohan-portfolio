@@ -2,9 +2,12 @@
 import GitIcon from "../../assets/icons/GitIcon.astro";
 import LinkedinIcon from "../../assets/icons/LinkeinIcon.astro";
 import TwitterIcon from "../../assets/icons/TwitterIcon.astro";
+
+const {direction} = Astro.props;
+
 ---
 
-<div class="sidebar flex flex-col justify-center items-center px-5 gap-5">
+<div class=`sidebar flex ${direction} justify-center items-center px-5 gap-5`>
 
   <a href="https://github.com/Johanfeliz08" target="_blank">
     <GitIcon class="link-icon fill-white size-7"/>

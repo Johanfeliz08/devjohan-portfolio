@@ -18,9 +18,9 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
   </h2>
 
   <div
-    class="content flex flex-row w-full h-[350px] max-h-[350px] border-2 border-solid border-white border-opacity-10"
+    class="content flex flex-row w-full h-[30rem] max-h-[30rem] min-w-[53rem] border-2 border-solid border-white border-opacity-10"
   >
-    <IconSideBar />
+    <IconSideBar direction="lg:flex-col" />
 
     <div class="picture relative bottom-[105px] max-w-[300px] h-fit shrink-0">
       <img src={profileTest.src} alt="Johan's picture" class="" />
@@ -31,7 +31,7 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
         <h3>22 YEARS / DR / FRONT-END</h3>
       </div>
 
-      <p class="text-sm text-justify max-w-md text-balance opacity-75">
+      <p class="text-sm text-justify text-balance overflow-hidden opacity-75">
         Hello! My name is Johan E. Feliz Ureña, and I'm a passionate
         22-year-old System Engineering student with a focus on web development.
         As a front-end developer, I thrive on crafting beautiful and
@@ -42,7 +42,7 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
         high-quality results.
       </p>
 
-      <div class="flex flex-row space-x-7">
+      <div class="links flex flex-row gap-7">
         <MainLink text="CV" link={cvSpanish} size="default" target="_blank">
           <UserIcon class="size-5" slot="icon" />
         </MainLink>
@@ -54,22 +54,139 @@ import cvEnglish from "../assets/CV - Johan E. Feliz Ureña - English.pdf";
     </div>
   </div>
 
-  <style>
-    .content {
-      background: #101112;
-      box-shadow: 0px 4px 100px 0px #000;
-    }
-
-    .section-header {
-      font-family: Cera CY Bold;
-    }
-
-    p {
-      font-family: Cera CY Regular;
-    }
-
-    img {
-      mask-image: linear-gradient(black, black 60%, transparent 100%);
-    }
-  </style>
 </section>
+
+<style>
+  .content {
+    background: #101112;
+    box-shadow: 0px 4px 100px 0px #000;
+  }
+
+  .section-header {
+    font-family: Cera CY Bold;
+  }
+
+  p {
+    font-family: Cera CY Regular;
+  }
+
+  img {
+    mask-image: linear-gradient(black, black 60%, transparent 100%);
+  }
+
+/* Responsive design */
+
+/* Small screen size */
+@media (max-width:768px) {
+
+  .aboutme {
+    padding: 10rem 0;
+  }
+  
+  .section-header {
+    position: static;
+    padding-bottom: 10px;
+  }
+
+  .picture {
+    position: static;
+  }
+
+  p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* padding: 0px 0.5rem; */
+   max-width: 80%;
+   /* min-width: 20%; */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:65rem;
+    max-height: 65rem;
+    max-width: 40rem;
+    min-width:20rem;
+  }
+
+  .info {
+    align-items: center;
+  }
+
+  .header-info {
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+
+
+}
+
+/* Medium screen size */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .aboutme {
+    padding: 10rem 0;
+  }
+  
+  .section-header {
+    position: static;
+    padding-bottom: 10px;
+  }
+
+  .picture {
+    position: static;
+  }
+
+  p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0px 2rem;
+   max-width: 80%;
+   min-width: 80%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:60rem;
+    max-height: 60rem;
+    max-width: 40rem;
+    min-width:30rem;
+  }
+
+  .info {
+    align-items: center;
+  }
+
+  .header-info {
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+}
+
+
+
+
+</style>
