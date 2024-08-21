@@ -36,7 +36,9 @@ const Header = () => {
       <header className="mainheader flex flex-row justify-center items-center w-full h-[10px] pt-10">
         <nav className="navbar flex flex-row justify-between md:justify-center items-center fixed z-40 px-16 py-5 border-black border-solid border-b w-full">
           <div className="logo-container md:hidden">
+            <a href="#">
             <img src={logo.src} alt="devjohan logo" className=" size-14" />
+            </a>
           </div>
 
           <ul className={`hambugermenuOpen navulopen md:flex md:flex-row md:space-x-8 ${toggleHamburgerMenu()}`}>
