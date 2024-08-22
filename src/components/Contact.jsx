@@ -77,7 +77,6 @@ const Contact = () => {
 
     }
 
-    
   };
 
   const clearForm = () => {
