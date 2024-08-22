@@ -156,6 +156,7 @@ const Contact = () => {
             id="contactform"
             action=""
             className="flex flex-col gap-4 w-full"
+            netlify
           >
             <div className="input-group flex flex-col py-3">
               <input
