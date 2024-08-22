@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef,useEffect } from "react";
 
 import "../components/styles/Header.css";
 
@@ -9,17 +9,53 @@ import aboutmeIcon from "../assets/icons/aboutme.png";
 import contactIcon from "../assets/icons/contact.png";
 import logo from "../assets/logo.png";
 
-
 const Header = () => {
   
   const [isChecked, setIsChecked] = useState(false);
+  
+  /* 
+  
+  Pollyfill for ScrollTimeLine animation
+
+  Note for myself:
+
+  useEffect allows me to manage side effect like the import, and be able to access to the dom
+  after it has been render, then with the useRef access to the dom element and be able to use the .animate
+
+  How the animation works: Based on the scroll, it will set the background to a gradient from the 5% of scroll to 100%, before 5% will be transparent
+  which is the base style 
+
+  In the "background:" property, the array means implicitly from and to, the first element of the array is "from" and the second "to"
+  
+  */
+
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+
+    import( 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js').then( () => {
+      
+      if (navbarRef.current) {
+      navbarRef.current.animate(
+        {background: ['radial-gradient(100% 100% at 50% 0%, #1c1e1f 0%, #121414 100%)','radial-gradient(100% 100% at 50% 0%, #1c1e1f 0%, #121414 100%)']},
+        {timeline: new ScrollTimeline({
+          source: document.documentElement,
+        }),
+        rangeStart: "5%",
+        rangeEnd: "100%"
+        })
+      }
+    }
+  )
+
+  },[])
 
   const toggleHamburgerMenu = () => {
 
     /* 
     The hamburgericon behind is a checkbox, so if its checked it shows the lateral panel
     Otherwise it hide it. 
-    And due to that the lateral style for the ul is only active when the screen size is too small
+    And due to that the lateral style for the ul change automatically when the screens size change
     We just have to show or hide it
     */
 
@@ -30,11 +66,11 @@ const Header = () => {
      }
 
   }
-  
+
   return (
     <>
       <header className="mainheader flex flex-row justify-center items-center w-full h-[10px] pt-10">
-        <nav className="navbar flex flex-row justify-between md:justify-center items-center fixed z-40 px-16 py-5 border-black border-solid border-b w-full">
+        <nav ref={navbarRef} className="navbar flex flex-row justify-between md:justify-center items-center fixed z-40 px-16 py-5 border-black border-solid border-b w-full">
           <div className="logo-container md:hidden">
             <a href="#">
             <img src={logo.src} alt="devjohan logo" className=" size-14" />
@@ -105,5 +141,6 @@ const Header = () => {
     </>
   );
 };
+
 
 export default Header;

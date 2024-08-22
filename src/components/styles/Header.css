@@ -18,11 +18,15 @@
 }
 
 
+/* .navbar {
+  
+} */
+
 /* Change the background from transparent to a gradient with the first scroll*/
-@keyframes scrollbg {
+/* @keyframes scrollbg {
 
   5%{
-    background: var(--bg);  
+    background: var(--bg); 
   }
 
   100%{
@@ -32,9 +36,9 @@
 }
 
 .navbar {
-  animation: scrollbg linear;
-  animation-timeline: scroll();
-}
+  animation: scrollbg linear both;
+  animation-timeline: scroll(root);
+} */
 
 /* Hover effect of links */
 
