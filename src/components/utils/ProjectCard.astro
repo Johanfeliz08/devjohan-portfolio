@@ -22,12 +22,14 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
 <div
   class="card flex flex-row w-[800px] border-2 border-solid border-white border-opacity-10"
 >
-  <div class="image w-[375px] max-w-[475px] mt-10 aspect-square">
+  <div
+    class="image flex justify-center items-center w-[375px] max-w-[475px] aspect-square"
+  >
     <img src={img} alt={title} class="w-full rounded-tr-xl" />
   </div>
 
   <div class="info flex flex-col justify-center items-center w-1/2 gap-4 p-10">
-    <h2 class="title text-2xl opacity-90">{title}</h2>
+    <h2 class="title text-2xl text-center opacity-90">{title}</h2>
 
     <p
       class="description text-sm text-justify opacity-75 text-balance max-h-40 md:max-w-xs"
