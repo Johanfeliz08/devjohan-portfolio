@@ -1,5 +1,4 @@
 ---
-
 // Components
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.jsx";
@@ -14,65 +13,61 @@ import Layers from "../assets/icons/Layers.astro";
 import RightArrow from "../assets/icons/RightArrow.astro";
 
 const allProjects = ProjectsData;
-
 ---
 
 <Layout title="devjohan | Projects">
-  <header class=" max-w-screen-lg flex flex-col justify-center items-center">
+  <header class="max-w-screen-lg flex flex-col justify-center items-center">
     <Header client:load />
   </header>
   <main
     class="main flex flex-col justify-center items-center w-full max-w-screen-lg gap-y-32 py-20"
   >
-    
-  <section
-  id="projects"
-  class="projects max-w-screen-lg h-full flex flex-col justify-center py-10 gap-8"
->
-  <div class="header flex flex-row justify-start items-center max-w-screen-lg">
-    <Layers class="size-14 fill-white" />
-    <h1 class="section-header text-4xl text-white px-7">ALL MY PROJECTS</h1>
-  </div>
-
-
-  <div class="projects-main flex flex-col justify-center items-center gap-12">
-    {
-      allProjects.map((data ) => (
-        <ProjectCard
-          id={data.id}
-          img={data.img}
-          title={data.title}
-          description={data.description}
-          technologies={data.technologies}
-          view={data.view}
-          code={data.code}
-        />
-      ))
-
-    }
-  </div>
-
-  <footer class="flex justify-center items-center">
-    <a
-      href="/"
-      class="go-back flex justify-center items-center w-44 py-2 opacity-80 border-b-2 border-solid border-white"
+    <section
+      id="projects"
+      class="projects max-w-screen-lg h-full flex flex-col justify-center py-10 gap-8"
     >
-      <span class="text-sm">GO BACK</span>
-      <RightArrow class="arrow-icon size-5 stroke-white" />
-    </a>
-  </footer>
-</section>
+      <div
+        class="header flex flex-row justify-start items-center max-w-screen-lg"
+      >
+        <Layers class="size-14 fill-white" />
+        <h1 class="section-header text-4xl text-white px-7">ALL MY PROJECTS</h1>
+      </div>
 
+      <div
+        class="projects-main flex flex-col justify-center items-center gap-12"
+      >
+        {
+          allProjects.map((data) => (
+            <ProjectCard
+              id={data.id}
+              img={data.img}
+              title={data.title}
+              description={data.description}
+              technologies={data.technologies}
+              view={data.view}
+              code={data.code}
+            />
+          ))
+        }
+      </div>
 
+      <footer class="flex justify-center items-center">
+        <a
+          href="/"
+          class="go-back flex justify-center items-center w-44 py-2 opacity-80 border-b-2 border-solid border-white"
+        >
+          <span class="text-sm">GO BACK</span>
+          <RightArrow class="arrow-icon size-5 stroke-white" />
+        </a>
+      </footer>
+    </section>
   </main>
 
-  <Footer/>
+  <Footer />
 </Layout>
 
-
 <style>
-
-.go-back {
+  .go-back {
     color: #ffffff;
     border-color: #ffffff;
     transition: ease 0.5s;
@@ -94,5 +89,4 @@ const allProjects = ProjectsData;
     translate: 0px 0px;
     transition: ease 0.5s;
   }
-
 </style>

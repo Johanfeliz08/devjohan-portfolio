@@ -2,70 +2,36 @@
 [
   {
     "id":1,
-    "img": "/little-lemon-show.png",
-    "title": "Little Lemon",
-    "description": "Our web application for restaurants offers convenient features such as online table reservations, food ordering, and menu browsing. Users can create accounts, leave feedback, and access detailed restaurant information. ",
+    "img": "/3legant.jpg",
+    "title": "3legant Golf - E-commerce Landing Page",
+    "description": "Fully responsive landing page for 3legant, a fictional golf e-commerce company. This site seamlessly adapts to various screen sizes, offering a polished and user-friendly interface that reflects the elegance and precision associated with the game of golf. ",
     "technologies": {
 
       "html": false,
-      "css": true,
+      "css": false,
       "javascript": false,
       "react": true,
-      "astro": false,
-      "tailwind": false
+      "astro": true,
+      "tailwind": true
     },
-    "view":"https://little-lemon-devjohan.netlify.app",
-    "code":"https://github.com/Johanfeliz08/little-lemon"
+    "view":"https://3legant-golf.netlify.app/",
+    "code":"https://github.com/Johanfeliz08/3legant-golf"
   },
   {
     "id":2,
-    "img": "/little-lemon-show.png",
-    "title": "Project name",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa quia, doloremque aut minus earum deserunt est fugiat odit maxime soluta accusantium, vero quidem. Hic saepe vitae expedita ea dolorum",
+    "img": "/Alexandrashairstyle-showcase.png",
+    "title": "Alexandra's Hair Style - Services page",
+    "description": "This project is a fully responsive website for 'Alexandra's Hair Style'. The website is designed to display all available services with easy navigation, ensuring accessibility across devices.",
     "technologies": {
 
       "html": false,
       "css": false,
-      "javascript": true,
+      "javascript": false,
       "react": true,
       "astro": true,
       "tailwind": true
     },
-    "view":"#",
-    "code":"#"
-  },
-  {
-    "id":3,
-    "img": "/little-lemon-show.png",
-    "title": "Project name",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa quia, doloremque aut minus earum deserunt est fugiat odit maxime soluta accusantium, vero quidem. Hic saepe vitae expedita ea dolorum",
-    "technologies": {
-
-      "html": false,
-      "css": false,
-      "javascript": true,
-      "react": true,
-      "astro": true,
-      "tailwind": true
-    },
-    "view":"#",
-    "code":"#"
-  },
-  {
-    "id":4,
-    "img": "/little-lemon-show.png",
-    "title": "Project name",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa quia, doloremque aut minus earum deserunt est fugiat odit maxime soluta accusantium, vero quidem. Hic saepe vitae expedita ea dolorum",
-    "technologies": {
-
-      "html": false,
-      "css": false,
-      "javascript": true,
-      "react": true,
-      "astro": true,
-      "tailwind": true
-    },
-    "view":"#",
-    "code":"#"
+    "view":"https://alexandrashairstyle.vercel.app/",
+    "code":""
   }
 ]

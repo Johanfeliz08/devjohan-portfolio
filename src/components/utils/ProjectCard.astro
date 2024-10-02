@@ -18,123 +18,131 @@ import View from "../../assets/icons/View.astro";
 const { id, img, title, description, technologies, view, code } = Astro.props;
 ---
 
-<div class="card flex flex-row w-[800px] h-[325px] max-h-[375px] border-2 border-solid border-white border-opacity-10">
-  
-  <div class="image w-[375px] max-w-[475px] mt-10 aspect-video">
+<div
+  class="card flex flex-row w-[800px] border-2 border-solid border-white border-opacity-10"
+>
+  <div class="image w-[375px] max-w-[475px] mt-10 aspect-square">
     <img src={img} alt={title} class="w-full rounded-tr-xl" />
   </div>
 
   <div class="info flex flex-col justify-center items-center w-1/2 gap-4 p-10">
-    <h2 class="text-2xl opacity-90">{title}</h2>
+    <h2 class="title text-2xl opacity-90">{title}</h2>
 
-    <p class="text-sm text-justify max-w-xs opacity-75 text-balance max-h-40">
+    <p
+      class="description text-sm text-justify opacity-75 text-balance max-h-40 md:max-w-xs"
+    >
       {description}
     </p>
 
-    <div class="technologies flex flex-row justify-center items-center gap-5">
-
-
+    <div
+      class="technologies flex flex-row justify-center items-center gap-5 py-3"
+    >
       {technologies.html && <HtmlIcon class="technology w-9 h-9 fill-white " />}
-      {technologies.javascript && <JavascriptIcon class="technology w-9 h-9 fill-white " />}
-      {technologies.react && <ReactIcon class="technology w-9 h-9 fill-white " />}
-      {technologies.astro && <AstroIcon class="technology w-9 h-9 fill-white " />}
+      {
+        technologies.javascript && (
+          <JavascriptIcon class="technology w-9 h-9 fill-white " />
+        )
+      }
+      {
+        technologies.react && (
+          <ReactIcon class="technology w-9 h-9 fill-white " />
+        )
+      }
+      {
+        technologies.astro && (
+          <AstroIcon class="technology w-9 h-9 fill-white " />
+        )
+      }
       {technologies.css && <CssIcon class="technology w-9 h-9 fill-white " />}
-      {technologies.tailwind && <TailwindIcon class="technology w-9 h-9 fill-white " />}
-
+      {
+        technologies.tailwind && (
+          <TailwindIcon class="technology w-9 h-9 fill-white " />
+        )
+      }
     </div>
 
     <div class="links flex flex-row space-x-4">
-
       <MainLink text="VIEW" link={view} size="w-28 h-10" target="_blank">
-        <View class="size-5" slot="icon"/>
+        <View class="size-5" slot="icon" />
       </MainLink>
 
-     <SecondaryLink text="CODE" link={code} size="w-28 h-10" target="_blank">
-        <Code class="size-5" slot="icon">
+      <SecondaryLink text="CODE" link={code} size="w-28 h-10" target="_blank">
+        <Code class="size-5" slot="icon" />
       </SecondaryLink>
-      
     </div>
   </div>
+
+  <style>
+    .card {
+      background: #101112;
+      box-shadow: 0px 4px 100px 0px #000;
+    }
+
+    h1,
+    h2 {
+      font-family: Cera CY Bold;
+    }
+
+    .technology {
+      transition: ease 0.5s;
+    }
+
+    .technology:hover {
+      fill: var(--accent);
+      transform: scale(1.3, 1.3);
+      transition: ease 0.5s;
+    }
+
+    /* Responsive design */
+
+    /* Small screen size */
+    @media (max-width: 768px) {
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 450px;
+        width: 100%;
+      }
+
+      .image {
+        aspect-ratio: 0;
+        height: auto;
+        margin-top: 0px;
+      }
+
+      .info {
+        width: 100%;
+        gap: 15px;
+      }
+
+      .info .title {
+        text-align: center;
+      }
+    }
+
+    /* Medium screen size */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .card {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        max-width: 800px;
+      }
+
+      .image {
+        height: 100%;
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .image > img {
+        height: 80%;
+        width: auto;
+      }
+    }
+  </style>
 </div>
-
-<style>
-  .card {
-    background: #101112;
-    box-shadow: 0px 4px 100px 0px #000;
-  }
-
-  h1,
-  h2 {
-    font-family: Cera CY Bold;
-  }
-
-  .technology {
-    transition:ease 0.5s;
-  }
-
-  .technology:hover {
-    fill: var(--accent);
-    transform: scale(1.3,1.3);
-    transition:ease 0.5s;
-  }
-
-  /* Responsive design */
-
-  /* Small screen size */
-  @media (max-width:768px) {
-
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      max-height:650px;
-      height: 650px;
-      max-width: 450px;
-      width: 100%;    
-    }
-
-    .image {
-      height: auto;
-      width:300px;
-      margin-top:0px;
-    }
-
-    .info {
-      width: 100%;
-      gap:30px;
-    }
-
-
-  }
-
-  /* Medium screen size */
-  @media (min-width: 768px) and (max-width: 1024px) {
-
-    .card {
-      display: flex;
-      flex-direction: row;
-      width:700px ;
-      max-width: 800px;
-      height: 350px ;
-    }
-
-    .image {
-      height: 100%;
-      width:100%;
-      margin-top:0px;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .image > img {
-      height: 80%;
-      width: auto;
-    }
-
-  }
-
-
-
-</style>
