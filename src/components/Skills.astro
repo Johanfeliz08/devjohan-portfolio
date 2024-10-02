@@ -1,5 +1,4 @@
 ---
-
 // UX/UI Section imports
 import UxuiIcon from "../assets/icons/uxuiIcon.astro";
 import FigmaIcon from "../assets/icons/FigmaIcon.astro";
@@ -13,64 +12,63 @@ import JavascriptIcon from "../assets/icons/JavascriptIcon.astro";
 import ReactIcon from "../assets/icons/ReactIcon.astro";
 import AstroIcon from "../assets/icons/AstroIcon.astro";
 
-// Tools section imports 
+// Tools section imports
 import ToolsIcon from "../assets/icons/Tools.astro";
 import GitIcon from "../assets/icons/GitIcon.astro";
-
-
+import Typescripticon from "../assets/icons/Typescripticon.astro";
 ---
 
-<section class="skills w-full h-full flex flex-row justify-center items-center gap-20 border-y-2 border-solid border-white border-opacity-10 py-24">
-
-    <div class="uxui flex flex-col justify-center items-center space-y-4">
-
-      <h2 class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90">
-        <UxuiIcon class=" fill-white size-8"/>
-        UX/UI DESIGN
-      </h2>
-      <div class="icons fill-white opacity-50 space-x-5">
-
-        <FigmaIcon class="size-10"/>
-  
-      </div>
+<section
+  class="skills w-full h-full flex flex-row justify-center items-center gap-20 border-y-2 border-solid border-white border-opacity-10 py-24"
+>
+  <div class="uxui flex flex-col justify-center items-center space-y-4">
+    <h2
+      class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90"
+    >
+      <UxuiIcon class="fill-white size-8" />
+      UX/UI DESIGN
+    </h2>
+    <div class="icons fill-white opacity-50 space-x-5">
+      <FigmaIcon class="size-10" />
     </div>
+  </div>
 
-
-    <div class="front-end flex flex-col justify-center items-center space-y-4">
-
-      <h2 class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90">
-        <Code class="fill-white size-8"/>
-        FRONT-END
-      </h2>
-      <div class="icons flex flex-row justify-center items-center fill-white opacity-50 space-x-2">
-
-        <HtmlIcon class="size-10"/>
-        <CssIcon class="size-10"/>
-        <TailwindIcon class="size-10"/>
-        <JavascriptIcon class="size-10"/>
-        <ReactIcon class="size-10"/>
-        <AstroIcon class="size-10"/>
-
-      </div>
+  <div class="front-end flex flex-col justify-center items-center space-y-4">
+    <h2
+      class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90"
+    >
+      <Code class="fill-white size-8" />
+      FRONT-END
+    </h2>
+    <div
+      class="icons flex flex-row justify-center items-center fill-white opacity-50 space-x-2"
+    >
+      <HtmlIcon class="size-10" />
+      <CssIcon class="size-10" />
+      <TailwindIcon class="size-10" />
+      <JavascriptIcon class="size-10" />
+      <Typescripticon class="size-10" />
+      <ReactIcon class="size-10" />
+      <AstroIcon class="size-10" />
     </div>
-    
-    <div class="tools flex flex-col justify-center items-center space-y-4">
+  </div>
 
-      <h2 class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90">
-        <ToolsIcon class="fill-white size-8"/>
-        TOOLS
-      </h2>
-      <div class="icons flex flex-row justify-center items-center fill-white opacity-50 space-x-2">
-
-        <GitIcon class="size-10"/>
-
-      </div>
+  <div class="tools flex flex-col justify-center items-center space-y-4">
+    <h2
+      class="flex fle-row justify-center items-center gap-2 text-2xl text-white opacity-90"
+    >
+      <ToolsIcon class="fill-white size-8" />
+      TOOLS
+    </h2>
+    <div
+      class="icons flex flex-row justify-center items-center fill-white opacity-50 space-x-2"
+    >
+      <GitIcon class="size-10" />
     </div>
-
+  </div>
 </section>
 
 <style>
-
   h1,
   h2 {
     font-family: Cera CY Bold;
@@ -80,26 +78,17 @@ import GitIcon from "../assets/icons/GitIcon.astro";
 
   /* Small screen size */
   @media (width < 768px) {
-
-   .skills {
-    flex-direction: column;
-    width: 80%;
-   }
-
-
+    .skills {
+      flex-direction: column;
+      width: 80%;
+    }
   }
 
   /* Medium screen size */
   @media (min-width: 768px) and (max-width: 1024px) {
-
-
-   .skills {
-    flex-direction: column;
-    width: 80%;
-   }
-    
-
+    .skills {
+      flex-direction: column;
+      width: 80%;
+    }
   }
-
-
 </style>

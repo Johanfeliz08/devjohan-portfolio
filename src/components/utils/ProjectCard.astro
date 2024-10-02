@@ -6,6 +6,7 @@ import JavascriptIcon from "../../assets/icons/JavascriptIcon.astro";
 import TailwindIcon from "../../assets/icons/TailwindIcon.astro";
 import AstroIcon from "../../assets/icons/AstroIcon.astro";
 import ReactIcon from "../../assets/icons/ReactIcon.astro";
+import Typescripticon from "../../assets/icons/Typescripticon.astro";
 
 //Buttons component
 import MainLink from "./MainLink.astro";
@@ -41,6 +42,11 @@ const { id, img, title, description, technologies, view, code } = Astro.props;
       {
         technologies.javascript && (
           <JavascriptIcon class="technology w-9 h-9 fill-white " />
+        )
+      }
+      {
+        technologies.typescript && (
+          <Typescripticon class="technology w-9 h-9 fill-white " />
         )
       }
       {

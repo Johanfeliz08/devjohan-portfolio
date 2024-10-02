@@ -10,6 +10,7 @@
       "html": false,
       "css": false,
       "javascript": false,
+      "typescript": false,
       "react": true,
       "astro": true,
       "tailwind": true
@@ -27,6 +28,7 @@
       "html": false,
       "css": false,
       "javascript": false,
+      "typescript": true,
       "react": true,
       "astro": true,
       "tailwind": true
